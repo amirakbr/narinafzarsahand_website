@@ -1,6 +1,5 @@
-import { image } from "@heroui/react";
-import { desc } from "framer-motion/client";
 import Image from "next/image";
+import FeaturesSwiper from "./featureSwiper";
 
 const Features = () => {
   const featureData = {
@@ -29,7 +28,7 @@ const Features = () => {
         نوین و هوشمند مالی ضمن حذف این فرایند، زمینه بهبود و
         شفافیت بیشتر گردش مالی فراهم کرده است...
         `,
-        image: "/assets/landingImage/feature1.png",
+        image: "/assets/landingImage/fintech.png",
       },
       {
         label: "درگاه پرداخت",
@@ -39,7 +38,7 @@ const Features = () => {
         درگاه بانکی نیست! نارین افزار سهند با احساس نیاز در این
         حوزه، به ارائه درگاههای پرداخت کامال شخصی سازی شده،
         اقدام نموده است.`,
-        image: "/assets/landingImage/feature1.png",
+        image: "/assets/landingImage/paymentGateway.png",
       },
       {
         label: "تورمجازی",
@@ -48,34 +47,77 @@ const Features = () => {
         نارین افزار سهند امکانی ایجاد کرده است تا مسافران
         تصاویر سهبعدی اتوبوسها را مشاهده نمایند و قبل از خرید
         بلیط، از امکانات و وضعیت آنها مطمئن شوند.`,
-        image: "/assets/landingImage/feature1.png",
+        image: "/assets/landingImage/virtualTour.png",
       },
     ],
   };
   return (
     <>
-      <div className="flex flex-col gap-4">
-        <h5>{featureData.title}</h5>
-        <p>{featureData.title}</p>
-        <div className="grid grid-cols-1 xl:grid-cols-2">
-          <div>
-            {featureData.features
-              .filter(({ isLargerOne }) => isLargerOne)
-              .map(({ description, image, label }) => (
-                <div className="flex items-center gap-4" key={`${label}`}>
-                  <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
-                    <Image src={image} alt={label} fill objectFit="cover" objectPosition="center" />
-                  </div>
+      <div className="flex flex-col gap-4 px-8">
+        <div className="flex flex-col gap-4 px-4">
+          <h6 className="text-2xl font-bold text-primary">
+            {featureData.title}
+          </h6>
+          <p className="text-sm text-gray-600">{featureData.description}</p>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <div>
+              {featureData.features
+                .filter(({ isLargerOne }) => isLargerOne)
+                .map(({ description, image, label }) => (
+                  <div
+                    className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1"
+                    key={`${label}`}
+                  >
+                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={label}
+                        fill
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
 
-                  <div className="flex flex-col gap-2">
-                    <h6 className="text-xl text-primary font-bold">{label}</h6>
-                    <p className="line-clamp-2">{description}</p>
+                    <div className="flex flex-col gap-2">
+                      <h6 className="text-lg text-primary font-black">
+                        {label}
+                      </h6>
+                      <p className="line-clamp-2">{description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-1 xl:grid-rows-3 gap-4">
+              {featureData.features
+                .filter(({ isLargerOne }) => !isLargerOne)
+                .map(({ description, image, label }) => (
+                  <div
+                    className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1"
+                    key={`${label}`}
+                  >
+                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={label}
+                        fill
+                        objectFit="cover"
+                        objectPosition="center"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <h6 className="text-lg text-primary font-black">
+                        {label}
+                      </h6>
+                      <p className="line-clamp-2">{description}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 xl:grid-cols-1 xl:grid-rows-3"></div>
         </div>
+        <FeaturesSwiper />
       </div>
     </>
   );

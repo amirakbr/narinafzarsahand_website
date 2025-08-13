@@ -48,7 +48,7 @@ export default function Timeline() {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4 py-16 font-[Vazirmatn] hidden md:block">
-        <h2 className="text-2xl font-bold text-[#4249d8] text-center mb-12">
+        <h2 className="text-2xl font-bold text-[#4249d8] text-center my-12">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
         <div className="relative">
@@ -59,7 +59,7 @@ export default function Timeline() {
             <div
               key={index}
               className={`mb-16 flex w-full items-start ${
-                item.side === "left" ? "flex-row-reverse" : "flex-row"
+                item?.side === "left" ? "flex-row-reverse" : "flex-row"
               }`}
             >
               <div className="w-5/12" />
@@ -69,15 +69,15 @@ export default function Timeline() {
                 {/* خط افقی */}
                 <div
                   className={`absolute top-1/2 translate-y-[-50%] w-[calc(100%+40px)] h-[2px] bg-gray-300 z-0 ${
-                    item.side === "left" ? "left-1/2" : "right-1/2"
+                    item?.side === "left" ? "left-1/2" : "right-1/2"
                   }`}
                 />
 
                 {/* دایره آبی */}
                 <div className="w-12 h-12 rounded-full bg-[#4249d8] flex items-center justify-center z-10 shadow-lg">
                   <Image
-                    src={item.icon}
-                    alt={item.title}
+                    src={item?.icon}
+                    alt={item?.title}
                     width={24}
                     height={24}
                   />
@@ -88,18 +88,18 @@ export default function Timeline() {
               <div className="w-5/12  rounded-lg p-6 relative z-10">
                 <span
                   className={`flex  top-1/2 -translate-y-1/2 font-bold text-lg bg-white rounded-md py-4 px-4 shadow-md text-[#4249d8] ${
-                    item.side === "left"
+                    item?.side === "left"
                       ? "justify-self-end"
                       : "justify-self-start"
                   }`}
                 >
-                  {item.year}
+                  {item?.year}
                 </span>
-                <h3 className="text-lg font-semibold text-gray-700  mb-3">
-                  {item.title}
+                <h3 className="lg:text-lg font-semibold text-gray-700  mb-3">
+                  {item?.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-">
-                  {item.description}
+                <p className="text-gray-600 leading-relaxed ">
+                  {item?.description}
                 </p>
               </div>
             </div>
@@ -107,7 +107,10 @@ export default function Timeline() {
         </div>
       </div>
 
-      <div className="block md:hidden px-5">
+      <div className="block md:hidden px-5 mt-16">
+        <h2 className="text-lg font-bold text-[#4249d8] text-center ">
+          مسیر رشد و توسعه نازین افزار سهند
+        </h2>
         {timelineData?.map((item, index) => (
           <div
             key={index}
@@ -123,24 +126,24 @@ export default function Timeline() {
         `}
             >
               <span className="flex font-bold text-lg bg-white rounded-md py-2 px-3 shadow-md text-[#4249d8]">
-                {item.year}
+                {item?.year}
               </span>
               <div className="w-12 h-12 rounded-full bg-[#4249d8] flex items-center justify-center shadow-lg">
                 <Image
-                  src={item.icon}
-                  alt={item.title}
+                  src={item?.icon}
+                  alt={item?.title}
                   width={24}
                   height={24}
                 />
               </div>
             </div>
             <div className="mt-14">
-              <h3 className="text-lg font-semibold text-gray-700 mb-3">
-                {item.title}
+              <h3 className=" font-semibold text-gray-700 mb-3">
+                {item?.title}
               </h3>
 
               <p className="text-gray-600 leading-relaxed text-justify">
-                {item.description}
+                {item?.description}
               </p>
             </div>
           </div>

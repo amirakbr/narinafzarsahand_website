@@ -27,7 +27,7 @@ export default function WhySection() {
   return (
     <section className=" text-center">
       <div className="container mx-auto px-4">
-        <h4 className="text-right font-bold text-3xl text-[#4249d8]">
+        <h4 className="text-right font-bold lg:text-3xl text-[#4249d8]">
           مأموریت و چشم‌انداز ما
         </h4>
         <div className=" hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-3">
@@ -35,15 +35,15 @@ export default function WhySection() {
             <div key={index} className="group cursor-pointer">
               <div className="overflow-hidden rounded-lg">
                 <Image
-                  src={item.img}
-                  alt={item.title}
+                  src={item?.img}
+                  alt={item?.title}
                   width={400}
                   height={250}
                   className="w-full h-auto object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 />
               </div>
-              <p className="mt-3 text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#4249d8]">
-                {item.title}
+              <p className="mt-3 lg:text-lg font-medium text-black transition-colors duration-300 group-hover:text-[#4249d8]">
+                {item?.title}
               </p>
             </div>
           ))}
@@ -65,8 +65,8 @@ export default function WhySection() {
               <div className="group cursor-pointer">
                 <div className="overflow-hidden rounded-lg">
                   <Image
-                    src={item.img}
-                    alt={item.title}
+                    src={item?.img}
+                    alt={item?.title}
                     width={400}
                     height={250}
                     className="w-full h-auto object-cover "

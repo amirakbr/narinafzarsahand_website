@@ -23,7 +23,7 @@ const FeaturesSwiper = () => {
       },
       {
         label: " ساختار مشارکتی",
-        image: "/assets/landingImage/controlGate.png",
+        image: "/assets/landingImage/partnership.png",
       },
       {
         label: "پلتفرم جامع مالی",
@@ -59,9 +59,9 @@ const FeaturesSwiper = () => {
           {yourNeeds.solutions?.map(({ image, label }, index) => (
             <SwiperSlide key={`feature slide ${index}`}>
               <div
-                className={`flex flex-col gap-4 grayscale-0 xl:grayscale-100 xl:hover:!grayscale-0 transition-all group`}
+                className={`flex flex-col items-center gap-4 grayscale-0 xl:grayscale-100 xl:hover:!grayscale-0 transition-all group`}
               >
-                <div className="relative transition-all h-60 group:hover:scale-105  rounded-xl overflow-hidden">
+                <div className="relative transition-all h-60 group:hover:scale-105  rounded-xl overflow-hidden w-64">
                   <Image
                     alt="your need"
                     src={image}

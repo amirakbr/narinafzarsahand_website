@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Baner from "../_components/baner";
+import Baner from "../_components/baner/baner";
 import WhySection from "./_components/features";
 import Timeline from "./_components/timeLine";
 import { useRef, useState } from "react";
-import VideoWithOverlay from "./_components/video";
+import VideoWithOverlay from "../_components/video";
 
 const About = () => {
   const features = [
@@ -26,8 +26,15 @@ const About = () => {
   };
   return (
     <div>
-      <Baner />
-      <div className="mx-5 md:mx-20 xl:mx-50">
+      <Baner
+        title="داستان ما"
+        subTitle="چــرا نارین افزار سهند؟"
+        image={{
+          url: "/assets/AboutUs/Banner-aboutUS.png",
+          alt: "",
+        }}
+      />
+      <div className="mx-5 md:mx-20 2xl:mx-50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mt-10">
           <div className="">
             <div>
@@ -57,7 +64,12 @@ const About = () => {
             <hr className="text-[#4249d8] h-10" />
           </div>
           <div className="hidden md:flex justify-center lg:justify-end ">
-            <VideoWithOverlay />
+            <VideoWithOverlay
+              cover={{ url: "/assets/aboutUs/friendly.png", alt: "video" }}
+              videoUrl="/assets/aboutUs/video.mp4"
+              playButtonStyle="z-10 bg-[#4249d8] p-3 rounded-lg -right-11 bottom-10 xl:bottom-0 -translate-y-1/2"
+              playButtonPosition="absolute"
+            />
           </div>
         </div>
         <div className="my-2">

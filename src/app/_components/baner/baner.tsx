@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { banerProps } from "./interface";
 
-const Baner = () => {
+const Baner = ({ title, subTitle, image }: banerProps) => {
   return (
     <div className="relative w-full h-[320px] overflow-hidden">
       <Image
-        src={"/assets/aboutUs/Banner-aboutUS.png"}
-        alt="بنر"
+        src={image?.url}
+        alt={image?.alt}
         fill
         className="object-cover opacity-100"
         priority
@@ -20,9 +21,9 @@ const Baner = () => {
         }}
       ></div>
 
-      <div className="absolute right-10  md:right-20 xl:right-50 top-1/2 text-white text-right">
-        <h2 className="text-xl md:text-5xl md:font-bold mb-2">داستان ما</h2>
-        <p className="text-xl md:text-3xl">چرا نارین افزار سهند؟</p>
+      <div className="absolute right-10  md:right-20 2xl:right-50 top-1/2 text-white text-right">
+        <h2 className="text-xl md:text-5xl md:font-bold mb-2"> {title} </h2>
+        <p className="text-xl md:text-3xl"> {subTitle} </p>
       </div>
     </div>
   );

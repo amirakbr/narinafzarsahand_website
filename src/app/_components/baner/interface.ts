@@ -5,6 +5,6 @@ export interface IImage {
 
 export interface banerProps {
   image: IImage;
-  title: string;
-  subTitle: string;
+  title?: string;
+  subTitle?: string;
 }

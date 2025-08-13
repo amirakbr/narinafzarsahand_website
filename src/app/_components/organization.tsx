@@ -85,7 +85,7 @@ const Organization = () => {
                 {organizationData.organization}
               </p>
             </div>
-            <p className="text-xs font-semibold text-center text-primary-900 bg-white p-2 rounded-lg">
+            <p className="text-xs font-semibold text-center text-primary-900 bg-white p-2 rounded-lg hidden lg:block">
               پلتفرم اختصاصی کسب و کار خود را سفارش بده!
             </p>
           </div>

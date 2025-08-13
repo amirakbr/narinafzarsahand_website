@@ -32,8 +32,8 @@ const SpecializedSolutions = () => {
     ],
   };
   return (
-    <div className="grid grid-cols-1 gap-4 items-center jusify-center">
-      <div className="justify-self-center relative w-3/4 mx-4 h-[28rem] max-w-[25rem]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center jusify-center container mx-auto xl:px-8 p-2">
+      <div className="justify-self-center lg:justify-self-start relative w-3/4 h-[28rem] lg:h-[32rem] max-w-[25rem]">
         <div
           className="w-full h-full bg-cover bg-no-repeat bg-[-24rem] pt-12 pb-20 px-2 text-white relative rounded-xl overflow-hidden"
           style={{

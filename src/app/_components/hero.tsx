@@ -63,20 +63,22 @@ const Hero = () => {
               className="bg-cover bg-no-repeat bg-center pt-12 pb-20 px-2 text-white relative"
             >
               <span className="absolute inset-0 !bg-gradient-to-l !from-[#151b59]/80 !to-transparent"></span>
-              <div className="flex flex-col gap-8 xs:max-w-3/4 min-h-[30rem] z-[10] relative">
-                <div className="flex flex-col gap-6">
-                  <h1>{title}</h1>
-                  <p>{description}</p>
-                  <div className="border-t-1 border-t-white">{footer}</div>
+              <div className="z-[10] relative container mx-auto p-2">
+                <div className="flex flex-col gap-8 min-h-[20rem] sm:max-w-3/4 md:max-w-1/2">
+                  <div className="flex flex-col gap-6">
+                    <h1>{title}</h1>
+                    <p>{description}</p>
+                    <div className="border-t-1 border-t-white">{footer}</div>
+                  </div>
+                  <Button
+                    fullWidth={false}
+                    variant="bordered"
+                    className="text-white w-max"
+                    radius="sm"
+                  >
+                    {button?.label ?? ""}
+                  </Button>
                 </div>
-                <Button
-                  fullWidth={false}
-                  variant="bordered"
-                  className="text-white w-max"
-                  radius="sm"
-                >
-                  {button?.label ?? ""}
-                </Button>
               </div>
             </SwiperSlide>
           )

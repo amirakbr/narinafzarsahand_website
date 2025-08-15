@@ -8,7 +8,7 @@ import Image from "next/image";
 const Services = () => {
   return (
     <div className="min-h-screen bg-white">
-      <section className="flex flex-col gap-4">
+      <section className="flex flex-col gap-8">
         <Banner
           backGroundimageSrc="/assets/services/banner.png"
           backGroundimageAlt="a man hand holding a pen and writing on apaper"
@@ -20,7 +20,7 @@ const Services = () => {
               "object-[center_0] sm:object-[center_20%] xl:object-[center_30%]",
           }}
         />
-        <div className="flex flex-col gap-2 px-4 sm:px-0">
+        <div className="flex flex-col gap-4 px-4 sm:px-0">
           <p className="container mx-auto text-base/8 text-xl">
             نارین افزار سهند با ارائه راهکارهای جامع مالی و فناوریهای نوین،
             کسبوکارها را در مسیر تحول، مدیریت مالی هوشمند و افزایش بهرهوری
@@ -33,7 +33,8 @@ const Services = () => {
           <span className="border-b-2 border-b-primary w-full lg:w-1/2 xl:w-3/4 "></span>
         </div>
       </section>
-      <section className="container mx-auto px-4 sm:px-0">
+      <div className="mt-8 flex flex-col gap-12 mx-2">
+        <section className="container mx-auto px-4 sm:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-between">
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-bold text-primary">فین‌تک</h2>
@@ -48,16 +49,23 @@ const Services = () => {
               فناوری مالی ما دقیقًا همان چیزی است که نیاز دارید.
             </p>
           </div>
-          <div className="flex flex-col gap-4 w-max justify-self-end">
+          <div className="flex flex-col gap-4 lg:w-max lg:justify-self-end">
             <Image
               alt="fintech globe image"
               src={"/assets/services/globe.svg"}
               width={150}
               height={150}
-              className="justify-self-center mx-auto"
+              className="justify-self-center mx-auto hidden lg:block"
             />
-            <p className="max-w-md bg-primary text-white text-xl text-center p-2 rounded-lg">
+            <p className="w-full lg:max-w-md bg-primary text-white text-xl text-left lg:text-center p-2 rounded-lg relative">
               تجربه‌ای هوشمند برای رشد کسبوکار شما
+              <Image
+              alt="fintech globe image"
+              src={"/assets/services/globe.svg"}
+              width={80}
+              height={150}
+              className="justify-self-center mx-auto block lg:hidden absolute -bottom-2 right-4"
+            />
             </p>
           </div>
         </div>
@@ -164,7 +172,7 @@ const Services = () => {
           <Image
             alt="iranpaymex.com logo"
             src={"/assets/services/iranpaymex.png"}
-            width={150}
+            width={100}
             height={100}
           />
           <p className="text-xl">
@@ -180,7 +188,8 @@ const Services = () => {
           </p>
         </div>
       </section>
-      <section className="flex flex-col gap-4">
+      </div>
+      <section className="flex flex-col gap-4 mt-8">
         <Banner
           backGroundimageSrc="/assets/services/banner.png"
           backGroundimageAlt="a man hand holding a pen and writing on apaper"

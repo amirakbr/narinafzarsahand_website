@@ -13,7 +13,7 @@ const Banner = ({
 }: IBannerProps) => {
   return (
     <div className="text-white relative min-h-[250px] lg:min-h-[300px] xl:min-h-[450px] flex items-center">
-      <span className="absolute inset-0 !bg-gradient-to-l !from-[#151b59]/80 !to-transparent z-[1]"></span>
+      <span className="absolute inset-0 !bg-gradient-to-l !from-primary-900 !to-transparent to-[50%] z-[1]"></span>
       <div className="absolute inset-0">
         <Image
           alt={backGroundimageAlt}

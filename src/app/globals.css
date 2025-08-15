@@ -1,5 +1,17 @@
 @import "tailwindcss";
-@import "tailwindcss";
 @plugin './hero.ts';
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
+
+:root {
+  --heroui-primary-900: 237.19deg 65.8% 20%;
+  --heroui-primary-800: 237.19deg 65.8% 40%;
+  --heroui-primary-700: 237.19deg 65.8% 45%;
+  --heroui-primary-600: 237.19deg 65.8% 50%;
+  --heroui-primary-500: 237.19deg 65.8% 55.3%;
+  --heroui-primary: 237.19deg 65.8% 55.3%;
+  --heroui-primary-400: 237.19deg 65.8% 60%;
+  --heroui-primary-300: 237.19deg 65.8% 70%;
+  --heroui-primary-200: 237.19deg 65.8% 80%;
+  --heroui-primary-100: 237.19deg 65.8% 90%;
+}

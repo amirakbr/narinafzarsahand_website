@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/card": "^2.2.23",
     "@heroui/react": "^2.8.2",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.539.0",

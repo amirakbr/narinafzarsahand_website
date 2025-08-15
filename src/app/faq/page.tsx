@@ -66,7 +66,7 @@ const FAQ = () => {
           backGroundimageSrc="/assets/faq/faq.png"
           description="پاسخ تمام ابهامات شما در یک نگاه!"
           title="داستان ما"
-          highlightWord="پاسخ"
+          highlightWord={["پاسخ"]}
           classNames={{
             image: "object-[center_0] sm:object-[center_65%]",
           }}

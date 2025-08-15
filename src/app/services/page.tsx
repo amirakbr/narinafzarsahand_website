@@ -13,7 +13,7 @@ const Services = () => {
           backGroundimageSrc="/assets/services/banner.png"
           backGroundimageAlt="a man hand holding a pen and writing on apaper"
           description="تحول مالی کسب‌وکار شما"
-          highlightWord="تحول"
+          highlightWord={["تحول"]}
           title="خدمات"
           classNames={{
             image:

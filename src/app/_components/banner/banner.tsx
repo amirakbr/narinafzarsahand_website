@@ -33,7 +33,7 @@ const Banner = ({
             <h1 className="text-2xl font-bold">{title}</h1>
             <p className="text-lg font-medium">
               {description?.split(" ")?.map?.((word, index) =>
-                word === highlightWord ? (
+                highlightWord?.includes(word) ? (
                   <span key={`${word} - ${index}`} className="text-primary">
                     {word + " "}
                   </span>

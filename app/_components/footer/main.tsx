@@ -55,7 +55,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer dir="rtl" className="relative text-white">
+    <footer dir="rtl" className="relative text-white mt-8">
       <div className="absolute inset-0">
         <img
           src="/assets/Footer-Photo/3.png"

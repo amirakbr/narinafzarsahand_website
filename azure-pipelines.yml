@@ -15,14 +15,13 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    mkdir -p output
-    cp -R publish/* output/
-    cp -R node_modules output/
-  displayName: 'Prepare output for archive'
-
-- script: |
     npm run publish
   displayName: 'npm build and publish'
+
+- script: |
+    cp -R node_modules publish/
+  displayName: 'Copy node_modules into publish'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: 'publish'

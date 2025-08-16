@@ -20,8 +20,7 @@ steps:
 
   - powershell: |
       Copy-Item -Path "node_modules" -Destination "publish\node_modules" -Recurse
-    displayName: 'Copy node_modules into publish'
-
+    displayName: "Copy node_modules into publish"
 
   - task: ArchiveFiles@2
     inputs:
@@ -31,15 +30,17 @@ steps:
       archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
       replaceExistingArchive: true
 
-
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: "$(Build.ArtifactStagingDirectory)"
       ArtifactName: "drop"
       publishLocation: "Container"
-      
+
   - task: IISWebAppDeploymentOnMachineGroup@0
     inputs:
-      WebSiteName: '01-beta.narinsoft.ir'
-      Package: '$(Build.ArtifactStagingDirectory)/drop/$(Build.BuildId).zip'
+      WebSiteName: "01-beta.narinsoft.ir"
+      Package: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
       TakeAppOfflineFlag: true
+      RenameFiles: true
+      TakeAppOffline: true
+      RemoveAdditionalFilesFlag: true

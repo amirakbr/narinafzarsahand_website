@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint-fix": "eslint ./_components/** ./pages/** -c .eslintrc.json --fix --ext js,jsx",
     "check": "tsc --noemit && echo Good job! :)",
-    "publish": "del-cli .next && npm run build && make-dir publish && cpy .next publish && cpy server.js publish && cpy package.json publish && cpy .env.local.temp publish && cpy public publish && cpy \"publish readme.html\" publish"
+    "publish": ".next && npm run build && make-dir publish && cpy .next publish && cpy server.js publish && cpy package.json publish && cpy .env.local.temp publish && cpy public publish && cpy \"publish readme.html\" publish"
   },
   "dependencies": {
     "@heroui/accordion": "^2.2.21",

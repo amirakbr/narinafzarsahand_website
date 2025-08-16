@@ -17,10 +17,11 @@ steps:
   - script: |
       npm run publish
     displayName: "npm build and publish"
-    
-  - script: |
-      robocopy node_modules publish\node_modules /E
-    displayName: "Move node_modules into publish"
+
+  - powershell: |
+      Copy-Item -Path "node_modules" -Destination "publish\node_modules" -Recurse
+    displayName: 'Copy node_modules into publish'
+
 
   - task: ArchiveFiles@2
     inputs:

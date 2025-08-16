@@ -15,7 +15,7 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run buil
+    npm run build
   displayName: 'npm build and publish'
 - task: ArchiveFiles@2
   inputs:

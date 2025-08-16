@@ -3,6 +3,7 @@ import EnamadSeal from "./_components/enamadSeal";
 import Address from "./_components/addres";
 import ContactWays from "./contactWays";
 import Services from "./_components/services";
+import { link } from "fs";
 
 export default function Footer() {
   const adresses = [
@@ -32,21 +33,25 @@ export default function Footer() {
       title: "مشاوره و ثبت درخواست",
       url: "/assets/Footer-Photo/telegramIcon.png",
       alt: "test",
+      link: "https://www.speedtest.net/",
     },
     {
       title: "مشاوره و ثبت درخواست",
       url: "/assets/Footer-Photo/telegramIcon.png",
       alt: "test",
+      link: "https://www.speedtest.net/",
     },
     {
       title: "مشاوره و ثبت درخواست",
       url: "/assets/Footer-Photo/telegramIcon.png",
       alt: "test",
+      link: "https://www.speedtest.net/",
     },
     {
       title: "مشاوره و ثبت درخواست",
       url: "/assets/Footer-Photo/telegramIcon.png",
       alt: "test",
+      link: "https://www.speedtest.net/",
     },
   ];
   return (

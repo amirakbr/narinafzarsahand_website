@@ -2,15 +2,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Button } from "@heroui/react";
+import { Autoplay } from "swiper/modules";
 
 const Hero = () => {
   const swiperData = [
     {
       title: "پلتفرم جامع مالی، همگام با نیاز هر صنعت",
-      description: `در نارینافزار سهند، راهکاری را توسعه دادهایم که پرداخت،
+      description: `در نارین‌افزار سهند، راهکاری را توسعه دادهایم که پرداخت،
 تسویه و مدیریت وجوه را هوشمند، شفاف و بدون پیچیدگی انجام
 میدهد. این زیرساخت مالی با اتصال به نظام بانکی، راهکاری امن
-و منعطف برای کسبوکارها و صنایع مختلف فراهم مینماید تا
+و منعطف برای کسب‌وکارها و صنایع مختلف فراهم مینماید تا
 فرآیندهای مالی خود را ساده، دقیق و یکپارچه مدیریت کنند.`,
       footer: "سکویی برای مدیریت هوشمند مالی",
       button: {
@@ -21,10 +22,10 @@ const Hero = () => {
     },
     {
       title: "خانواده نارین افزار سهند",
-      description: `نارینافزار سهند از دل یک تیم کوچک و متعهد متولد شد و
-امروز، ما یک خانوادهی بزرگ از توسعهدهندگان و کارشناسان
-متخصص هستیم که در کنار هم، سیستمهای جامع هوشمند و
-بومیسازیشده را برای صنایع مختلف طراحی و اجرا میکنیم.`,
+      description: `نارین‌افزار سهند از دل یک تیم کوچک و متعهد متولد شد و
+امروز، ما یک خانواده‌ی بزرگ از توسعه‌دهندگان و کارشناسان
+متخصص هستیم که در کنار هم، سیستم‌های جامع هوشمند و
+بومی‌سازی‌شده را برای صنایع مختلف طراحی و اجرا میکنیم.`,
       footer: "رشد ما نتیجه همکاری، تعهد و تخصص تیم بزرگ نارین افزار است.",
       button: {
         label: "پلتفرم اختصاصی کسب و کارت رو سفارش بده!",
@@ -34,10 +35,10 @@ const Hero = () => {
     },
     {
       title: "اولین زیرساخت مالی",
-      description: `شرکت نارین افزار سهند، نخستین ارائهدهنده پلتفرم جامع مالی در صنعت
-حملونقل مسافربری ایران، با هدف ساماندهی مالی و ارتقای کیفیت خدمات
+      description: `شرکت نارین افزار سهند، نخستین ارائه‌دهنده پلتفرم جامع مالی در صنعت
+حمل‌ونقل مسافربری ایران، با هدف ساماندهی مالی و ارتقای کیفیت خدمات
 فعـالیت میکـند. مـا در نـاریـن افـزار سـهنـد بـا بهـرهگیـری از فنـاوریهـای روز و
-انعطافپذیری در طراحی، پلتفرمهای مالی بومیسازیشده و هماهنگ با شرایط و
+انعطافپذیری در طراحی، پلتفرمهای مالی بومی‌سازی‌شده و هماهنگ با شرایط و
 نیازهای هر صنعت را ارائه میدهیم.`,
       footer: "شروع فعالیت از سال ۱۳۹۷",
       button: {
@@ -48,19 +49,19 @@ const Hero = () => {
     },
   ];
   return (
-    <>
+    <div>
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        autoplay={{ delay: 10000 }}
+        modules={[Autoplay]}
       >
         {swiperData?.map(
           ({ button, description, footer, title, imageUrl }, index) => (
             <SwiperSlide
               key={`hero slide ${index}`}
               style={{ backgroundImage: `url(${imageUrl})` }}
-              className="bg-cover bg-no-repeat bg-center pt-12 pb-20 px-2 text-white relative"
+              className="bg-cover bg-no-repeat bg-[center_0rem] lg:bg-[center_0rem] pt-12 pb-20 px-2 text-white relative"
             >
               <span className="absolute inset-0 !bg-gradient-to-l !from-[#151b59]/80 !to-transparent"></span>
               <div className="z-[10] relative container mx-auto p-2">
@@ -84,7 +85,7 @@ const Hero = () => {
           )
         )}
       </Swiper>
-    </>
+    </div>
   );
 };
 

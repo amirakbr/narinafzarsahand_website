@@ -101,9 +101,8 @@ const Organization = () => {
                   src={`/assets/landingImage/privateOrganization/${url}.png`}
                   width={50}
                   height={50}
-                  objectFit="cover"
-                  objectPosition="center"
-                  className="justify-self-center"
+                  
+                  className="justify-self-center object-cover object-center"
                 />
               ))}
             </div>

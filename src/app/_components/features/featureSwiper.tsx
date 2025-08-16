@@ -50,8 +50,7 @@ const FeaturesSwiper = () => {
                 alt="your need"
                 src={image}
                 fill
-                objectFit="fill"
-                objectPosition="center"
+                className="object-cover object-center"
               />
             </div>
             <h6 className="text-center text-primary text-lg font-semibold border-b-2 border-b-primary pb-1">
@@ -87,8 +86,7 @@ const FeaturesSwiper = () => {
                     alt="your need"
                     src={image}
                     fill
-                    objectFit="fill"
-                    objectPosition="center"
+                    className="object-cover object-center"
                   />
                 </div>
                 <h6 className="text-center text-primary text-lg font-semibold border-b-2 border-b-primary pb-1">

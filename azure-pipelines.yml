@@ -1,0 +1,32 @@
+trigger:
+- release
+
+pool:
+  name: default
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install --force
+  displayName: 'npm install'
+
+- script: |
+    npm run publish
+  displayName: 'npm build and publish'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'publish'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'

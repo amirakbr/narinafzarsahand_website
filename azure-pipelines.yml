@@ -20,7 +20,8 @@ steps:
 
   - powershell: |
       Copy-Item -Path "node_modules" -Destination "publish\node_modules" -Recurse
-    displayName: "Copy node_modules into publish"
+    displayName: 'Copy node_modules into publish'
+
 
   - task: ArchiveFiles@2
     inputs:
@@ -30,27 +31,15 @@ steps:
       archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
       replaceExistingArchive: true
 
+
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: "$(Build.ArtifactStagingDirectory)"
       ArtifactName: "drop"
       publishLocation: "Container"
-
-  # Stop App Pool before deployment
-  - powershell: |
-      Import-Module WebAdministration
-      Stop-WebAppPool -Name '01-beta.narinsoft.ir'
-    displayName: "Stop IIS App Pool"
-
-  # Deploy to IIS
+      
   - task: IISWebAppDeploymentOnMachineGroup@0
     inputs:
-      WebSiteName: "01-beta.narinsoft.ir"
-      Package: "$(Build.ArtifactStagingDirectory)/drop/$(Build.BuildId).zip"
+      WebSiteName: '01-beta.narinsoft.ir'
+      Package: '$(Build.ArtifactStagingDirectory)/drop/$(Build.BuildId).zip'
       TakeAppOfflineFlag: true
-
-  # Start App Pool after deployment
-  - powershell: |
-      Import-Module WebAdministration
-      Start-WebAppPool -Name '01-beta.narinsoft.ir'
-    displayName: "Start IIS App Pool"

@@ -4,6 +4,7 @@ import { HeroUIProvider } from "@heroui/react";
 import "./globals.css";
 import { Providers } from "./provider";
 import Header from "./_components/Header";
+import Footer from "./_components/footer/main";
 
 export const metadata: Metadata = {
   title: "شرکت حمل و نقل | خدمات لجستیک و حمل بار",
@@ -45,6 +46,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

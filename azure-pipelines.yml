@@ -1,5 +1,5 @@
 trigger:
-- release
+- master
 
 pool:
   name: default
@@ -15,11 +15,11 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm run build
+    npm run publish
   displayName: 'npm build and publish'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '.next'
+    rootFolderOrFile: 'publish'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -30,3 +30,4 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+

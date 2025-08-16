@@ -17,6 +17,11 @@ steps:
   - script: |
       npm run publish
     displayName: "npm build and publish"
+    
+  - script: |
+      robocopy node_modules publish\node_modules /E
+    displayName: "Move node_modules into publish"
+
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: "publish"
@@ -25,9 +30,6 @@ steps:
       archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip"
       replaceExistingArchive: true
 
-  - script: |
-      robocopy node_modules publish\node_modules /E
-    displayName: "Move node_modules into publish"
 
   - task: PublishBuildArtifacts@1
     inputs:

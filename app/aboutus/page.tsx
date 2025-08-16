@@ -1,4 +1,4 @@
-import Baner from "../_components/baner/baner";
+
 import WhySection from "./_components/features";
 import Timeline from "./_components/timeLine";
 import VideoWithOverlay from "../_components/video";

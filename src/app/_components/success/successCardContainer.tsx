@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SuccessCard from "./successCard";
+import Baner from "../baner/baner";
 
 const SuccessCardContainer = () => {
   const successCardData = [
@@ -63,17 +64,19 @@ const SuccessCardContainer = () => {
   const [selectedCard, setSelectedCard] = useState(successCardData[0]);
 
   return (
-    <div className="py-8 relative">
-      <span></span>
+    <div
+      style={{
+        backgroundImage: `url(/assets/landingImage/achivment.png)`,
+      }}
+      className="bg-cover bg-no-repeat bg-[0rem_40rem] xl:bg-[0rem_40rem] p-4 sm:p-10 text-white relative bg-fixed"
+    >
+      <span className="absolute inset-0 backdrop-grayscale-100"></span>
 
-      <div className="flex items-center gap-8">
-        <div>
-          <SuccessCard {...selectedCard} />
-        </div>
-        <div className="grid grid-rows-3 gap-2"></div>
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-8 container mx-auto px-4">
+        {successCardData.map((item, index) => (
+          <SuccessCard {...item} key={`success card ${index}`} />
+        ))}
       </div>
-
-      <div className="grid grid-cols-4 gap-8 hidden"></div>
     </div>
   );
 };

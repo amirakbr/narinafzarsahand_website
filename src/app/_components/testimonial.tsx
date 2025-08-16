@@ -61,11 +61,11 @@ const Testimonial = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-16 p-8 -top-20 relative z-[11]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-16 p-8 -top-20 relative z-[11] container mx-auto md:px-2">
         {TestimonialData.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-4 rounded-sm shadow-md shadow-slate-800"
+            className="bg-white p-4 py-8 rounded-sm shadow-md shadow-slate-800"
           >
             <div className="flex items-center gap-4 mb-2 border-b-2 border-b-primary pb-2">
               {item.icon}

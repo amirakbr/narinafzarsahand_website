@@ -26,7 +26,7 @@ const Features = () => {
         امین، حساب متمرکز، تقسیم سهم شرکا و... پیچیده، زمانبر
         و مستعد خطا هستند. اما نارین افزار سهند با طراحی سیستم
         نوین و هوشمند مالی ضمن حذف این فرایند، زمینه بهبود و
-        شفافیت بیشتر گردش مالی فراهم کرده است...
+        شفافیت بیشتر گردش مالی فراهم کرده است
         `,
         image: "/assets/landingImage/fintech.png",
       },
@@ -53,22 +53,22 @@ const Features = () => {
   };
   return (
     <>
-      <div className="flex flex-col gap-4 px-8">
+      <div className="flex flex-col gap-4 px-8 mx-auto container">
         <div className="flex flex-col gap-4 px-4">
           <h6 className="text-2xl font-bold text-primary">
             {featureData.title}
           </h6>
           <p className="text-sm text-gray-600">{featureData.description}</p>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-            <div>
+          <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.3fr] gap-4">
+            <div className="h-full">
               {featureData.features
                 .filter(({ isLargerOne }) => isLargerOne)
                 .map(({ description, image, label }) => (
                   <div
-                    className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1"
+                    className="flex flex-row xl:flex-col items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1 xl:p-0 h-full"
                     key={`${label}`}
                   >
-                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <div className="relative w-24 h-24 xl:h-80 xl:w-full flex-shrink-0 rounded-lg overflow-hidden">
                       <Image
                         src={image}
                         alt={label}
@@ -78,11 +78,13 @@ const Features = () => {
                       />
                     </div>
 
-                    <div className="flex flex-col gap-2">
-                      <h6 className="text-lg text-primary font-black">
+                    <div className="flex flex-col gap-2 xl:pb-8 xl:pt-4 xl:px-6">
+                      <h6 className="text-lg text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
                         {label}
                       </h6>
-                      <p className="line-clamp-2">{description}</p>
+                      <p className="line-clamp-2 xl:line-clamp-[unset] text-sm">
+                        {description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -93,24 +95,26 @@ const Features = () => {
                 .filter(({ isLargerOne }) => !isLargerOne)
                 .map(({ description, image, label }) => (
                   <div
-                    className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1"
+                    className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1 xl:p-0"
                     key={`${label}`}
                   >
-                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <div className="relative w-24 h-24 xl:h-full xl:w-60 flex-shrink-0 rounded-lg overflow-hidden">
                       <Image
                         src={image}
                         alt={label}
                         fill
                         objectFit="cover"
-                        objectPosition="center"
+                        objectPosition="0% center"
                       />
                     </div>
 
-                    <div className="flex flex-col gap-2">
-                      <h6 className="text-lg text-primary font-black">
+                    <div className="flex flex-col gap-2 xl:p-6 xl:py-2">
+                      <h6 className="text-lg text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
                         {label}
                       </h6>
-                      <p className="line-clamp-2">{description}</p>
+                      <p className="line-clamp-2 xl:line-clamp-[unset] text-sm">
+                        {description}
+                      </p>
                     </div>
                   </div>
                 ))}

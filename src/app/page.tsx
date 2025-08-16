@@ -1,5 +1,4 @@
 import Features from "./_components/features/features";
-import Header from "./_components/Header";
 import Hero from "./_components/hero";
 import Organization from "./_components/organization";
 import SpecializedSolutions from "./_components/specializedSolutions";
@@ -10,10 +9,12 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Hero />
       <Testimonial />
-      <SpecializedSolutions />
-      <Organization />
-      <Features />
-      <Success />
+      <div className="flex flex-col gap-16">
+        <SpecializedSolutions />
+        <Organization />
+        <Features />
+        <Success />
+      </div>
     </main>
   );
 }

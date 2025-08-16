@@ -1,11 +1,8 @@
-"use client";
-
-import Image from "next/image";
 import Baner from "../_components/baner/baner";
 import WhySection from "./_components/features";
 import Timeline from "./_components/timeLine";
-import { useRef, useState } from "react";
 import VideoWithOverlay from "../_components/video";
+import Banner from "../_components/banner/banner";
 
 const About = () => {
   const features = [
@@ -15,24 +12,14 @@ const About = () => {
     "نوآوری: طراحی و اجرای راهکارهای مالی پیشرفته و اختصاصی",
   ];
 
-  const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  const handlePlay = () => {
-    setShowVideo(true);
-    setTimeout(() => {
-      videoRef.current?.play();
-    }, 100);
-  };
   return (
     <div>
-      <Baner
+      <Banner
+        backGroundimageAlt="about us banner"
+        backGroundimageSrc="/assets/AboutUs/Banner-aboutUS.png"
+        description="چرا نارین افزار سهند؟"
+        highlightWord={["چرا"]}
         title="داستان ما"
-        subTitle="چــرا نارین افزار سهند؟"
-        image={{
-          url: "/assets/AboutUs/Banner-aboutUS.png",
-          alt: "",
-        }}
       />
       <div className="mx-5 md:mx-20 2xl:mx-50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mt-10">

@@ -1,8 +1,4 @@
-"use client";
-
-import { useState } from "react";
 import SuccessCard from "./successCard";
-import Baner from "../baner/baner";
 
 const SuccessCardContainer = () => {
   const successCardData = [
@@ -61,18 +57,17 @@ const SuccessCardContainer = () => {
       id: 3,
     },
   ];
-  const [selectedCard, setSelectedCard] = useState(successCardData[0]);
 
   return (
     <div
       style={{
         backgroundImage: `url(/assets/landingImage/achivment.png)`,
       }}
-      className="bg-cover bg-no-repeat bg-[0rem_40rem] xl:bg-[0rem_40rem] p-4 sm:p-10 text-white relative bg-fixed"
+      className="bg-cover bg-no-repeat lg:bg-[0rem_40rem] xl:bg-[0rem_40rem] p-4 sm:p-10 text-white relative bg-fixed"
     >
       <span className="absolute inset-0 backdrop-grayscale-100"></span>
 
-      <div className="grid grid-cols-2 xl:grid-cols-4 gap-8 container mx-auto px-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 container mx-auto px-4 z-[1]">
         {successCardData.map((item, index) => (
           <SuccessCard {...item} key={`success card ${index}`} />
         ))}

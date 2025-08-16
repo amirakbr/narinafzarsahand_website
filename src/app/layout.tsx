@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { HeroUIProvider } from "@heroui/react";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Providers } from "./provider";
 import Header from "./_components/Header";
@@ -22,6 +22,57 @@ export const metadata: Metadata = {
   },
 };
 
+const iranYekan = localFont({
+  src: [
+    {
+      path: "./public/fonts/IRANYekanXFaNum-UltraLight.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Thin.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-DemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "./public/fonts/IRANYekanXFaNum-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--iran-yekan",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -30,19 +81,11 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="font-vazir">
+      <body
+        className={`antialiased ${iranYekan?.className} ${iranYekan?.variable}`}
+      >
         <Providers>
           <Header />
           {children}

@@ -30,11 +30,11 @@ const Banner = ({
           children
         ) : (
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-lg font-medium">
+            <h1 className="text-4xl font-bold">{title}</h1>
+            <p className="text-xl font-medium">
               {description?.split(" ")?.map?.((word, index) =>
                 highlightWord?.includes(word) ? (
-                  <span key={`${word} - ${index}`} className="text-primary">
+                  <span key={`${word} - ${index}`} className="text-primary-300">
                     {word + " "}
                   </span>
                 ) : (

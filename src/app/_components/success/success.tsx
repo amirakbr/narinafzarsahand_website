@@ -8,9 +8,11 @@ const Success = () => {
     سـود شرکتهـا و صنایع، درجهـت رضایت و نفع مـشتریـان عمـل میکند.`,
   };
   return (
-    <div className="flex flex-col gap-4 px-8">
-      <h6 className="text-2xl font-bold text-primary">{successData.title}</h6>
-      <p className="text-sm text-gray-600">{successData.description}</p>
+    <div className="flex flex-col gap-16">
+      <div className="px-8 mx-auto container flex flex-col gap-4 px-8">
+        <h6 className="text-2xl font-bold text-primary">{successData.title}</h6>
+        <p className="text-sm text-gray-600">{successData.description}</p>
+      </div>
       <SuccessCardContainer />
     </div>
   );

@@ -53,7 +53,7 @@ const Features = () => {
   };
   return (
     <>
-      <div className="flex flex-col gap-4 px-8 mx-auto container">
+      <div className="flex flex-col gap-16 px-8 mx-auto container">
         <div className="flex flex-col gap-4 px-4">
           <h6 className="text-2xl font-bold text-primary">
             {featureData.title}
@@ -73,8 +73,7 @@ const Features = () => {
                         src={image}
                         alt={label}
                         fill
-                        objectFit="cover"
-                        objectPosition="center"
+                        className="object-cover object-center"
                       />
                     </div>
 
@@ -103,8 +102,7 @@ const Features = () => {
                         src={image}
                         alt={label}
                         fill
-                        objectFit="cover"
-                        objectPosition="0% center"
+                        className="object-cover object-center"
                       />
                     </div>
 

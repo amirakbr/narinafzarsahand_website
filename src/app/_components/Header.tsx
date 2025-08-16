@@ -36,7 +36,7 @@ const Header = () => {
           <Logo />
           <div className="hidden md:flex flex-row items-center gap-4">
             {menuConfig.map(({ label, src }) => (
-              <a key={`header link ${src}`} className="p-2 font-medium">
+              <a key={`header link ${src}`} className="p-2 font-medium" href={src}>
                 {label}
               </a>
             ))}

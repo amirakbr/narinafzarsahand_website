@@ -6,9 +6,9 @@ const Benefits = () => {
     "مدیریت بهینه ظرفیت ناوگان: ظرفیت اتوبوسها بر اساس تقاضای هر مقصد و پیش از حضور زائران در پایانه، تنظیم میشود که از ازدحام، اتلاف منابع وهزینههای سربار جلوگیری مینماید.",
   ];
   return (
-    <div className="my-12">
-      <h4 className="text-right font-bold text-lg lg:text-3xl text-[#4249d8] my-3">
-        مزایای طرح مدیریت حملونقل زائران اربعین
+    <div className="my-12 flex flex-col gap-4">
+      <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+        مزایای طرح مدیریت حمل‌ونقل زائران اربعین
       </h4>
 
       <ul className="list-disc pr-5 space-y-2 text-right">

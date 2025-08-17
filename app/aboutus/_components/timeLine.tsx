@@ -55,8 +55,8 @@ const timelineData = [
 export default function Timeline() {
   return (
     <>
-      <div className="max-w-6xl mx-auto px-4 py-16 font-[Vazirmatn] hidden md:block">
-        <h2 className="text-2xl font-bold text-[#4249d8] text-center my-12">
+      <div className="max-w-6xl mx-auto px-4 py-16 hidden md:block">
+        <h2 className="text-2xl font-bold text-primary text-center my-12">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
         <div className="relative">
@@ -82,7 +82,7 @@ export default function Timeline() {
                 />
 
                 {/* دایره آبی */}
-                <div className="w-12 h-12 rounded-full bg-[#4249d8] flex items-center justify-center z-10 shadow-lg">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg">
                   <Image
                     src={item?.icon}
                     alt={item?.title}
@@ -95,7 +95,7 @@ export default function Timeline() {
               {/* کارت */}
               <div className="w-5/12  rounded-lg p-6 relative z-10">
                 <span
-                  className={`flex  top-1/2 -translate-y-1/2 font-bold text-lg bg-white rounded-md py-4 px-4 shadow-md text-[#4249d8] ${
+                  className={`flex  top-1/2 -translate-y-1/2 font-bold text-lg bg-white rounded-md py-4 px-4 shadow-md text-primary ${
                     item?.side === "left"
                       ? "justify-self-end"
                       : "justify-self-start"
@@ -116,7 +116,7 @@ export default function Timeline() {
       </div>
 
       <div className="block md:hidden px-5 mt-16">
-        <h2 className="text-lg font-bold text-[#4249d8] text-center ">
+        <h2 className="text-lg font-bold text-primary text-center ">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
         {timelineData?.map((item, index) => (
@@ -133,10 +133,10 @@ export default function Timeline() {
           ${item?.side === "left" ? "-right-6 flex-row-reverse" : "-left-6"}
         `}
             >
-              <span className="flex font-bold text-lg bg-white rounded-md py-2 px-3 shadow-md text-[#4249d8]">
+              <span className="flex font-bold text-lg bg-white rounded-md py-2 px-3 shadow-md text-primary">
                 {item?.year}
               </span>
-              <div className="w-12 h-12 rounded-full bg-[#4249d8] flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
                 <Image
                   src={item?.icon}
                   alt={item?.title}

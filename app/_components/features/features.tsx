@@ -68,7 +68,7 @@ const Features = () => {
                     className="flex flex-row xl:flex-col items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1 xl:p-0 h-full"
                     key={`${label}`}
                   >
-                    <div className="relative w-24 h-24 xl:h-80 xl:w-full flex-shrink-0 rounded-lg overflow-hidden">
+                    <div className="relative w-24 h-24 xl:h-80 xl:w-full shrink-0 rounded-lg overflow-hidden">
                       <Image
                         src={image}
                         alt={label}
@@ -97,7 +97,7 @@ const Features = () => {
                     className="flex items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1 xl:p-0"
                     key={`${label}`}
                   >
-                    <div className="relative w-24 h-24 xl:h-full xl:w-60 flex-shrink-0 rounded-lg overflow-hidden">
+                    <div className="relative w-24 h-24 xl:h-full xl:w-60 shrink-0 rounded-lg overflow-hidden">
                       <Image
                         src={image}
                         alt={label}

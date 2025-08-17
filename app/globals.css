@@ -15,3 +15,5 @@
   --heroui-primary-200: 237.19deg 65.8% 80%;
   --heroui-primary-100: 237.19deg 65.8% 90%;
 }
+
+@custom-variant hover (&:hover);

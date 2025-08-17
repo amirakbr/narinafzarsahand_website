@@ -8,7 +8,7 @@ const Banner = ({
   description,
   highlightWord,
   title,
-  classNames = { image: "" },
+  classNames = { image: "", container: "" },
   children = undefined,
 }: IBannerProps) => {
   return (
@@ -25,7 +25,9 @@ const Banner = ({
           fetchPriority="high"
         />
       </div>
-      <div className="z-[10] relative container mx-auto p-2">
+      <div
+        className={`z-[10] relative container mx-auto p-2 ${classNames.container}`}
+      >
         {children ? (
           children
         ) : (

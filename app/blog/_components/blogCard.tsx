@@ -20,7 +20,7 @@ const BlogCard = ({
         } p-0`}
       >
         <div
-          className={`flex-shrink-0 ${
+          className={`shrink-0 ${
             size === "large" ? "w-full h-60" : "min-w-60 max-w-60"
           } relative`}
         >
@@ -46,7 +46,7 @@ const BlogCard = ({
           <div className="flex flex-col gap-2 text-right">
             <p
               className={`${
-                size === "large" ? "text-2xl" : "text-xl"
+                size === "large" ? "text-xl" : "text-lg"
               } font-bold`}
             >
               {title}
@@ -60,7 +60,7 @@ const BlogCard = ({
             >
               {summary}
             </p>
-            <CardFooter className="flex items-center justify-end text-primary group p-0">
+            <CardFooter className="flex items-center justify-end text-primary group p-0 gap-2">
               <p
                 className={`${
                   size === "large" ? "text-lg" : "text-sm"
@@ -68,7 +68,7 @@ const BlogCard = ({
               >
                 مطالعه ادامه مطلب
               </p>
-              <ArrowLeft size={size === "large" ? 15 : 20} />
+              <ArrowLeft size={size === "large" ? 20 : 15} />
             </CardFooter>
           </div>
         </div>

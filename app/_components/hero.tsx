@@ -67,9 +67,9 @@ const Hero = () => {
               <div className="z-[10] relative container mx-auto p-2">
                 <div className="flex flex-col gap-8 min-h-[20rem] sm:max-w-3/4 md:max-w-1/2">
                   <div className="flex flex-col gap-6">
-                    <h1>{title}</h1>
-                    <p>{description}</p>
-                    <div className="border-t-1 border-t-white">{footer}</div>
+                    <h1 className="font-semibold text-lg">{title}</h1>
+                    <p className="font-medium">{description}</p>
+                    <div className="border-t-1 border-t-white text-sm pt-1">{footer}</div>
                   </div>
                   <Button
                     fullWidth={false}

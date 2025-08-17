@@ -24,12 +24,12 @@ const About = () => {
       <div className="mx-5 md:mx-20 2xl:mx-50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mt-10">
           <div className="">
-            <div>
-              <h4 className="text-right font-bold text-lg lg:text-3xl text-[#4249d8]">
+            <div className="flex flex-col gap-4">
+              <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
                 نارین افزار سهند
               </h4>
-              <p className=" mt-3 lg:text-lg text-justify">
-                ما، به عنوان اولین ارائهدهنده پلتفرم جامع مالی در صنعت حمل‌ونقل
+              <p className="lg:text-lg text-justify">
+                ما، به عنوان اولین ارائه‌دهنده پلتفرم جامع مالی در صنعت حمل‌ونقل
                 مسافربین‌شهری در ایران، با هدف تحول در مدیریت مالی، ارتقای کیفیت
                 خدمات و افزایش شفافیت در تراکنش‌ها فعالیت خود را آغاز کردیم. در
                 نارین افزار سهند با بهره‌گیری از فناوری‌های نوین، سیستم‌های مالی
@@ -39,7 +39,7 @@ const About = () => {
             </div>
             <div className="my-4">
               <p className="text-justify lg:text-lg">
-                <span className="font-bold lg:text-xl mx-1">
+                <span className="font-bold lg:text-lg mx-1">
                   پلتفرم جامع مالی، همگام با نیاز هر صنعت:
                 </span>
                 نارین افزار سهند با ارائه راهکارهای مالی هوشمند و انعطاف‌پذیر،
@@ -48,31 +48,31 @@ const About = () => {
                 بهره‌وری و دقت انجام دهند.
               </p>
             </div>
-            <hr className="text-[#4249d8] h-10" />
+            <hr className="text-primary h-10" />
           </div>
           <div className="hidden md:flex justify-center lg:justify-end ">
             <VideoWithOverlay
               cover={{ url: "/assets/aboutUs/friendly.png", alt: "video" }}
               videoUrl="/assets/aboutUs/video.mp4"
-              playButtonStyle="z-10 bg-[#4249d8] p-3 rounded-lg -right-11 bottom-10 xl:bottom-0 -translate-y-1/2"
+              playButtonStyle="z-10 bg-primary p-3 rounded-lg -right-11 bottom-10 xl:bottom-0 -translate-y-1/2"
               playButtonPosition="absolute"
             />
           </div>
         </div>
         <div className="my-2">
-          <h4 className="text-right font-bold text-lg lg:text-3xl text-[#4249d8]">
-            مأموریت و چشمانداز ما
+          <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+            مأموریت و چشم‌انداز ما
           </h4>
           <p className=" mt-3 lg:text-lg text-justify">
-            <span className="font-bold text-lg lg:text-xl mx-1">
+            <span className="font-bold text-lg mx-1">
               مأموریت نارین افزار سهند:
             </span>
-            ارائه راهکارهای نوآورانه در حوزه فینتک برای مدیریت مالی هوشمند و
+            ارائه راهکارهای نوآورانه در حوزه فین‌تک برای مدیریت مالی هوشمند و
             بهینهسازی سیستمهای حملونقل، با تأکید بر افزایش شفافیت مالی، بهبود
             تجربه مسافران و کاهش هزینههای عملیاتی.
           </p>
           <p className=" mt-3 lg:text-lg text-justify">
-            <span className="font-bold lg:text-xl mx-1">
+            <span className="font-bold mx-1">
               چشم‌انداز نارین افزار سهند:
             </span>
             تبدیل‌شدن به پیشروترین شرکت ارائه‌دهنده خدمات مالی هوشمند در صنعت
@@ -81,7 +81,7 @@ const About = () => {
           </p>
         </div>
         <div className="my-12">
-          <h4 className="text-right font-bold text-lg lg:text-3xl text-[#4249d8] my-3">
+          <h4 className="text-right font-bold text-lg lg:text-2xl text-primary my-3">
             ارزش‌های نارین افزار سهند
           </h4>
 

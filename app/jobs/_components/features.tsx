@@ -7,7 +7,7 @@ const Features = ({ item }: IFeatureProps) => {
 
   return (
     <div
-      className="bg-white hover:bg-[#4249d8] border border-gray-200 rounded-lg shadow-sm flex flex-col p-4"
+      className="bg-white hover:bg-primary border border-gray-200 rounded-lg shadow-sm flex flex-col p-4"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

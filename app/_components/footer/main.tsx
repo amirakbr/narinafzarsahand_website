@@ -1,9 +1,9 @@
+"use client";
 import React from "react";
 import EnamadSeal from "./_components/enamadSeal";
 import Address from "./_components/addres";
 import ContactWays from "./contactWays";
 import Services from "./_components/services";
-import { link } from "fs";
 
 export default function Footer() {
   const adresses = [
@@ -12,46 +12,37 @@ export default function Footer() {
       postalCode: "١۴١١٧١٣١١۶",
     },
     {
-      address: "نشانی تهران: دانشگاه تربیت مدرس . سـاختمـان جـوانـه . طبقه دوم",
-      postalCode: "١۴١١٧١٣١١۶",
+      address:
+        "نشانی مشهد: خیابـان پاسداران . برج فیروزه شـرق . طبقه اول اداری.",
+      postalCode: "٩١٣٧٨۴۴٠۵١",
     },
     {
-      address: "نشانی تهران: دانشگاه تربیت مدرس . سـاختمـان جـوانـه . طبقه دوم",
-      postalCode: "١۴١١٧١٣١١۶",
+      address:
+        "نشانی تبریز: خیابان شهید مدرس خیابان شهید بهشتی مجتمع اداری عتیق۲ طبقه ۳ واحد ۳۳۷",
+      postalCode: "۵۱۳۶۹۴۴۴۱۰",
     },
   ];
 
-  const servics = [
-    "فــیـن تـــــــک",
-    "فــیـن تـــــــک",
-    "فــیـن تـــــــک",
-    "فــیـن تـــــــک",
-  ];
+  const servics = ["فین تک", "دستگاه پوز", "خدمات مالی", "برنامه نویسی"];
 
   const contactUs = [
     {
-      title: "مشاوره و ثبت درخواست",
-      url: "/assets/Footer-Photo/telegramIcon.png",
+      title: "۰۲۱۶۲۷۴۶۰۰۰",
+      url: "/assets/Footer-Photo/Footer-icon/1.svg",
       alt: "test",
-      link: "https://www.speedtest.net/",
+      link: "tel:+982162746000",
     },
     {
-      title: "مشاوره و ثبت درخواست",
-      url: "/assets/Footer-Photo/telegramIcon.png",
+      title: "narinafzaarsahand@yahoo.com",
+      url: "/assets/Footer-Photo/Footer-icon/2.svg",
       alt: "test",
-      link: "https://www.speedtest.net/",
+      link: "mailto:narinafzaarsahand@yahoo.com",
     },
     {
-      title: "مشاوره و ثبت درخواست",
-      url: "/assets/Footer-Photo/telegramIcon.png",
+      title: "support-narinafzarsahand",
+      url: "/assets/Footer-Photo/Footer-icon/3.svg",
       alt: "test",
-      link: "https://www.speedtest.net/",
-    },
-    {
-      title: "مشاوره و ثبت درخواست",
-      url: "/assets/Footer-Photo/telegramIcon.png",
-      alt: "test",
-      link: "https://www.speedtest.net/",
+      link: "https://t.me/support-narinafzarsahand",
     },
   ];
   return (

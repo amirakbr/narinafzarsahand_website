@@ -8,11 +8,11 @@ const Javanseir = ({ javanseirData }: IJavanseirProsp) => {
       backGroundimageAlt="image of an empty road"
       backGroundimageSrc="/assets/organization/insurance.png"
       classNames={{
-        container: "self-stretch",
+        container: "self-stretch p-4",
         image: "object-center",
       }}
     >
-      <div className="flex flex-col gap-8 h-full p-4 justify-center xl:max-w-7xl mx-auto border-2 border-primary rounded-xl">
+      <div className="flex flex-col gap-8 h-full p-6 justify-center xl:max-w-7xl mx-auto border-2 border-primary rounded-xl">
         <h3 className="text-2xl font-bold">{title}</h3>
         <p className="text-lg">{description}</p>
         <div className="flex flex-col lg:flex-row gap-8 justify-between relative">

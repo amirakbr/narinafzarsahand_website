@@ -9,10 +9,10 @@ const DetailJob = ({ image, title, desc, location, status }: ICardProps) => {
       </div>
       <div className="col-span-2  p-4 md:p-6 flex flex-col justify-between ">
         <div>
-          <h2 className="text-right font-bold text-lg lg:text-3xl text-[#4249d8]">
+          <h2 className="text-right font-bold text-lg lg:text-3xl text-primary">
             {title}
           </h2>
-          <hr className="text-[#4249d8] w-2/3 mt-1 h-1" />
+          <hr className="text-primary w-2/3 mt-1 h-1" />
         </div>
         <p className=" mt-3 lg:text-lg text-justify">{desc}</p>
         <div className="flex gap-8 mt-4">

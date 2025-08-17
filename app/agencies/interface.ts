@@ -28,3 +28,14 @@ export interface IJavanseirProsp {
     features: string[];
   };
 }
+
+export interface IKeyFeaturesProps {
+  keyFeatures: {
+    title: string;
+    features: {
+      label: string;
+      description: string;
+    }[];
+    description: string;
+  };
+}

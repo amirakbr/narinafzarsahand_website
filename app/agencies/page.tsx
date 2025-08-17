@@ -1,5 +1,6 @@
 import Banner from "../_components/banner/banner";
 import Javanseir from "./_components/javanseir";
+import KeyFeatures from "./_components/keyFeature";
 import NonPrivateAgencies from "./_components/nonPrivateAgencies";
 import PrivateAgencies from "./_components/privateAgencies";
 import Solutions from "./_components/solutions";
@@ -83,26 +84,28 @@ const Agencies = () => {
   };
 
   const keyFeatures = {
-    title: "",
+    title: "ویژگی‌های کلیدی پلتفرم نارین افزار سهند",
     features: [
       {
-        label: "",
-        description: "",
+        label: "مدیریت شفاف مالی",
+        description:
+          "ردیابی دقیق پرداخت‌ها و تسویه‌حساب‌ها در سامانه‌ای یکپارچه",
       },
       {
-        label: "",
-        description: "",
+        label: "بهینه‌سازی پرداختها",
+        description: "تسهیل پـرداخت‌های بین نهادی و مدیریت بودجه با دقت بالا",
       },
       {
-        label: "",
-        description: "",
+        label: "افزایش نظارت و کنترل",
+        description: "ارائه گزارش‌های تحلیلی جهت بهبود تصمیم‌گیری‌های کلان",
       },
       {
-        label: "",
-        description: "",
+        label: "اتصال به شبکه بانکی و پرداختی",
+        description: "هماهنگی سیستم مالی با بانکها و مؤسسات اعتباری",
       },
     ],
-    description: ``,
+    description: `همکاری با شهرداری‌ها، وزارتخانه‌ها، اداره کل راهداری و سایر سازمان‌های دولتی، نشان‌دهنده کارایی و انعطاف‌‌‌پذیری پلتفرم مالی نارین افزار سهند است. ما در کنار
+    سازمان‌های شما ایستاده‌ایم تا تحولی مدرن را در سیستم‌های مالی به ارمغان بیاوریم.`,
   };
 
   return (
@@ -119,6 +122,7 @@ const Agencies = () => {
       <Terminals terminalData={terminalData} />
       <NonPrivateAgencies privateAgenciesData={nonPrivateAgenciesData} />
       <Javanseir javanseirData={javanseirData} />
+      <KeyFeatures keyFeatures={keyFeatures}/>
     </>
   );
 };

@@ -69,7 +69,7 @@ const Testimonial = () => {
           >
             <div className="flex items-center gap-4 mb-2 border-b-2 border-b-primary pb-2">
               {item.icon}
-              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <h3 className="text-lg font-bold">{item.title}</h3>
             </div>
             {item.links.map((link, linkIndex) => (
               <div key={linkIndex} className="flex items-center gap-2">

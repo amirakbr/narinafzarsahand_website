@@ -1,30 +1,29 @@
-import Baner from "../_components/baner/baner";
+import Banner from "../_components/banner/banner";
 import IntroSection from "../_components/introSection/inddex";
-import VideoWithOverlay from "../_components/video";
+import VideoWithOverlay from "../_components/video/index";
 import Benefits from "./_components/benefits";
 
 const Events = () => {
   return (
     <>
-      <Baner
+      <Banner
         title="رویداد ها"
-        subTitle="در مسیر رشد و نوآوری"
-        image={{
-          url: "/assets/events/4.png",
-          alt: "",
-        }}
+        description="در مسیر رشد و نوآوری"
+        backGroundimageAlt="event banner"
+        backGroundimageSrc="/assets/events/4.png"
+        highlightWord={["در", "مسیر"]}
       />
       <div className="mx-5 md:mx-20 2xl:mx-50 mt-10">
         <IntroSection
-          title="تازهترین اخبار"
+          title="تازه‌ترین اخبار"
           desc="با ما همراه باشید تا از بهروزترین تحولات، طرحهای اختصاصی و پروژههای در حال اجرای نارین افزار سهند مطلع شوید."
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-6">
-          <div>
-            <h4 className="text-right font-bold text-lg lg:text-2xl text-[#4249d8]">
-              سامانه هوشمند مدیریت حملونقل زائران
+          <div className="flex flex-col gap-4">
+            <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+              سامانه هوشمند مدیریت حمل‌ونقل زائران
             </h4>
-            <p className="mt-3 lg:text-lg text-justify">
+            <p className="lg:text-lg text-justify">
               اربعین حسینی، بزرگترین اجتماع مذهبی جهان، سالانه میلیونها زائر را
               به کربلا جذب میکند. اما بازگشت این حجم عظیم زائران به شهرهای داخلی
               ایران همواره با چالشهای متعددی همراه بوده است. مشکلاتی همچون

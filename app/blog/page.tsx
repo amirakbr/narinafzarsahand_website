@@ -78,10 +78,10 @@ const BlogList = () => {
         classNames={{ image: "object-center" }}
         description="جدیدترین اخبار و مقاالت"
         highlightWord={["جدیدترین"]}
-        title="والگ"
+        title="بلاگ"
       />
       <div className="flex flex-col gap-8 container mx-auto px-8">
-        <p className="text-xl font-bold pb-2 border-b-2 border-b-primary">
+        <p className="text-lg font-medium pb-2 border-b-2 border-b-primary">
           در دنیای امروز، مدیریت مالی هوشمند و یکپارچه نقش کلیدی در بهبود عملکرد
           صنایع مختلف دارد. در وبلاگ نارین افزار سهند میتوانید با جدیدترین
           فناوری‌های مالی، روندهای دیجیتال، نوآوری‌های فین‌تک و راهکارهای مدیریت
@@ -89,7 +89,7 @@ const BlogList = () => {
           سیستم‌های مالی، اطلاعات دقیق و کاربردی در اختیار شما قرار دهیم.
         </p>
         <div className="flex flex-col gap-8">
-          <h2 className="text-xl font-bold text-primary">
+          <h2 className="text-2xl font-bold text-primary">
             جدیدترین مقاالت و رویدادها
           </h2>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.3fr_1fr]">

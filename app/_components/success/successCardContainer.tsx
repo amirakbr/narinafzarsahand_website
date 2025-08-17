@@ -63,7 +63,7 @@ const SuccessCardContainer = () => {
       style={{
         backgroundImage: `url(/assets/landingImage/achivment.png)`,
       }}
-      className="bg-cover bg-no-repeat bg-[center_-10rem] p-4 sm:p-10 text-white relative"
+      className="bg-cover bg-no-repeat lg:bg-[center_-10rem] p-4 sm:p-10 text-white relative"
     >
       <span className="absolute inset-0 backdrop-grayscale-100"></span>
 

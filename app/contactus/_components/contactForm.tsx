@@ -4,7 +4,7 @@ import { Button } from "@heroui/button";
 const CantactForm = () => {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-xl text-primary font-semibold">ثبت درخواست و مشاوره</p>
+      <p className="text-2xl text-primary font-semibold">ثبت درخواست و مشاوره</p>
       <hr className="text-primary bg-primary border-priamry" />
       <Input label="نام و نام خانوادگی" size="sm" />
       <Input label="ایمیل" size="sm" />

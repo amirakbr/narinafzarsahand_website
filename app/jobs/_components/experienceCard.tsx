@@ -20,13 +20,13 @@ const ExperienceCard = ({ experienceCard }: IExperienceCardProps) => {
                 className="w-20 h-20 rounded-full object-cover object-top"
               />
               <div className="mx-2 w-1/2">
-                <h3 className="text-right font-bold text-lg lg:text-xl mt-2 text-[#4249d8]">
+                <h3 className="text-right font-bold text-lg lg:text-xl mt-2 text-primary">
                   {exp.name}
                 </h3>
                 <p className="text-md text-rigth text-gray-600 mt-1">
                   {exp.job}
                 </p>
-                <hr className="text-[#4249d8] w-full h-1 mt-1" />
+                <hr className="text-primary w-full h-1 mt-1" />
               </div>
             </div>
 
@@ -59,13 +59,13 @@ const ExperienceCard = ({ experienceCard }: IExperienceCardProps) => {
                     className="w-20 h-20 rounded-full object-cover object-top"
                   />
                   <div className="mx-2">
-                    <h3 className="text-right font-bold text-lg lg:text-xl mt-2 text-[#4249d8]">
+                    <h3 className="text-right font-bold text-lg lg:text-xl mt-2 text-primary">
                       {exp.name}
                     </h3>
                     <p className="text-md text-rigth text-gray-600 mt-1">
                       {exp.job}
                     </p>
-                    <hr className="text-[#4249d8] w-full h-1 mt-1" />
+                    <hr className="text-primary w-full h-1 mt-1" />
                   </div>
                 </div>
 

@@ -1,10 +1,8 @@
-import { avatar } from "@heroui/react";
+
 import Banner from "../_components/banner/banner";
 import IntroSection from "../_components/introSection/inddex";
 import DetailJob from "./_components/detailJob";
 import ExperienceCard from "./_components/experienceCard";
-import { object } from "framer-motion/client";
-import { title } from "process";
 import Features from "./_components/features";
 
 const Jobs = () => {

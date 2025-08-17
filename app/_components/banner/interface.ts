@@ -8,6 +8,7 @@ export interface IBannerProps {
   backGroundimageAlt: string;
   classNames?: {
     image?: string;
+    container?: string;
   };
   children?: ReactNode;
 }

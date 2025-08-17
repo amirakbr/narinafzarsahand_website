@@ -20,7 +20,7 @@ const BlogCard = ({
         } p-0`}
       >
         <div
-          className={`flex-shrink-0 ${
+          className={`shrink-0 ${
             size === "large" ? "w-full h-60" : "min-w-60 max-w-60"
           } relative`}
         >

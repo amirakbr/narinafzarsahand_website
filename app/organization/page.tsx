@@ -1,116 +1,80 @@
-import Head from "next/head";
+import Banner from "../_components/banner/banner";
+import Municipality from "./_components/municipality";
+import ControlGate from "./_components/controlGate";
+import Bank from "./_components/bank";
+import Insurance from "./_components/insurance";
 
 export default function Home() {
+  const municipalityData = [
+    { imagesrc: "/assets/organization/municipality1.png" },
+    { imagesrc: "/assets/organization/municipality2.png" },
+    { imagesrc: "/assets/organization/municipality3.png" },
+  ];
+
+  const controlGateData = {
+    title: "ایستگاه پایش",
+    subTitle: "راهکاری هوشمند برای مدیریت حمل‌ونقل",
+    description: `نارین افزار سهند با طراحی و اجرای طرح ایستگاه پایش برای شهرداری‌ها، گامی مؤثر در بهینه‌سازی مدیریت ناوگان حمل‌ونقل بین‌شهری برداشته است. در این طرح،
+    تعداد مسافرین هر اتوبوس ۳۰ کیلومتر بعد از پایانه شمارش میشود تا تمامی سفرهای انجام‌شده، از جمله مسافرانی که خارج از پایانه سوار اتوبوس میشوند،
+    ثبت و مدیریت شوند.`,
+    features: [
+      `بهبود توزیع عادلانه درآمدها بین ذینفعان`,
+      `جلوگیری از هدررفت منابع و افزایش شفافیت مالی`,
+      `تأمین همزمان منافع مالکان، شهرداری و شرکتهای مسافربری`,
+      `مدیریت بهینه ظرفیت ناوگان و جلوگیری از سفرهای بدون ثبت`,
+    ],
+  };
+
+  const bankData = {
+    title: "بانک",
+    description: `نارین‌افزار سهند با بهره‌گیری از دانش فنی و تجربه در طراحی زیرساخت‌های
+        مالی، به بانک‌ها این امکان را میدهد تا خدمات پرداخت خود را با نیازهای
+        صنایع مختلف هم‌راستا سازند. درگاه پرداخت ایران‌پیمکس، محصول این رویکرد،
+        درگاهی امن، سریع و بومی‌سازی‌شده است که به‌عنوان یک پرداختیار رسمی بانک
+        مرکزی، نقش واسط میان کسب‌وکارها و شبکه بانکی کشور را ایفا میکند.`,
+    features: [
+      `تسهیل تسویه‌حساب‌ها و بهینه‌سازی فرآیندهای مالی`,
+      `افزایش امنیت، شفافیت و کنترل در تراکنش‌های مالی`,
+      `گسترش پوشش خدمات بانکی در صنایع سنتی و نوین`,
+      `افزایش تعامل موثر بانک‌ها با شرکت‌های فین‌تکی پیشرو`,
+      `ارائه درگاه‌های پرداخت اختصاصی برای کسب‌وکارهای مختلف و متناسب با نیاز هر صنعت`,
+    ],
+  };
+
+  const insuranceData = {
+    sectionTitle: "بیمه",
+    title: "نقش نارین افزار سهند در صنعت حمل‌ونقل و بیمه",
+    description: `نارین افزار سهند با طراحی یک پلتفرم فین‌تک اختصاصی برای حمل‌‌ونقل بین‌شهری، فرآیندهای مالی را هوشمند و یکپارچه کرده است. در این سیستم، پس از
+      خرید بلیط، پرداخت هزینه و تأیید صورت‌وضعیت حرکت اتوبوس، مبلغ بیمه ب‌هصورت سیستمی محاسبه و به‌طور خودکار و آنی به حساب بیمه واریز میشود. این
+      راهکار، دقت، شفافیت و سرعت را در تسویه مالی بین شرکت‌های مسافربری و بیمه‌ها بهبود میبخشد.`,
+    featureTitle:
+      "مزایای طرح یکپارچه مالی نارین افزار سهند در صنعت حمل‌ونقل و بیمه",
+    feature: [
+      `کاهش هزینه‌های اجرایی`,
+      `پرداخت خودکار و آنی بیمه`,
+      `افزایش سرعت عملیات مالی`,
+      `بهینه‌سازی فرآیندهای حمل‌ونقل`,
+      `کاهش خطای انسانی`,
+      `شـفافیت مالی`,
+      `تسهیـل امور مالی`,
+      `امنیت مالی بالا`,
+    ],
+  };
   return (
     <>
-      <Head>
-        <title>سازمان‌ها - نرم‌افزار نارین افزار سهند</title>
-        <meta name="description" content="پلتفرم هوشمند مدیریت مالی و عملیاتی" />
-      </Head>
-
-      {/* Top Navigation */}
-      <header className="border-b">
-        <div className="container mx-auto flex justify-between items-center py-3 px-4 text-sm">
-          <div className="flex gap-4">
-            <span>📞 ۰۹۱۲۳۴۵۶۷۸۹</span>
-            <span>✉ info@example.com</span>
-          </div>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded">
-            پشتیبانی شخصی
-          </button>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="w-full h-64 bg-gray-300"></div>
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
-          <h1 className="text-3xl font-bold">سازمان‌ها</h1>
-          <p className="mt-2">تکیه‌گاه بیش از ۴۰۰ شرکت</p>
-        </div>
-      </section>
-
-      {/* Private Organizations */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-xl font-bold mb-4">سازمان‌های خصوصی</h2>
-        <p className="mb-6 leading-7">
-          در دنیای امروز، سازمان‌های خصوصی در صنایع مختلف نیازمند افزایش بهره‌وری...
-        </p>
-
-        <ul className="list-disc list-inside mb-6 leading-7">
-          <li>بهبود فرآیندها و کاهش هزینه‌ها</li>
-          <li>پشتیبانی و ارتقاء کیفیت خدمات و نتایج</li>
-          <li>افزایش شفافیت مالی</li>
-        </ul>
-
-        <h3 className="text-lg font-semibold mb-6">
-          با راهکارهای نوآورانه، پنجره‌ای متناسب با نیاز صنعت شما ارائه می‌دهیم.
-        </h3>
-
-        {/* Terminals Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="w-full h-40 bg-gray-300"></div>
-          <div className="w-full h-40 bg-gray-300"></div>
-          <div className="w-full h-40 bg-gray-300"></div>
-          <div className="w-full h-40 bg-gray-300"></div>
-        </div>
-      </section>
-
-      {/* Non-Private Organizations */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-xl font-bold mb-4">سازمان‌های غیرخصوصی</h2>
-        <p className="mb-6 leading-7">
-          سازمان‌های غیرخصوصی شامل وزارت‌خانه‌ها و سازمان‌های عمومی...
-        </p>
-      </section>
-
-      {/* Company Feature Box */}
-      <section className="bg-blue-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-xl font-bold mb-4">شرکت جوان سیر ایثار</h2>
-          <p className="mb-6 leading-7">
-            شرکت جوان سیر ایثار از نرم‌افزار سهند، به‌منظور توسعه...
-          </p>
-
-          <ul className="list-disc list-inside mb-4 leading-7">
-            <li>برنامه‌های هوشمند مدیریت مسیرها</li>
-            <li>کنترل هزینه‌ها و افزایش شفافیت مالی</li>
-            <li>سیستم‌های تسهیل پرداخت</li>
-          </ul>
-
-          <div className="w-full h-40 bg-gray-300"></div>
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="container mx-auto px-4 py-12">
-        <h2 className="text-xl font-bold mb-4">ویژگی‌های کلیدی پلتفرم نارین افزار سهند</h2>
-        <ul className="list-disc list-inside leading-7 space-y-2">
-          <li>مدیریت جامع مالی و عملیاتی</li>
-          <li>پشتیبانی از سازمان‌های بزرگ</li>
-          <li>افزایش بهره‌وری و شفافیت</li>
-          <li>امنیت داده‌ها</li>
-        </ul>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-12">
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="font-semibold mb-4">تماس با ما</h4>
-            <p>support@narinatsarand.com</p>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4">خدمات</h4>
-            <ul className="space-y-1">
-              <li>مشاوره</li>
-              <li>پشتیبانی</li>
-              <li>آموزش</li>
-            </ul>
-          </div>
-          <div className="w-full h-24 bg-gray-300"></div>
-        </div>
-      </footer>
+      <Banner
+        backGroundimageAlt="organization banner"
+        backGroundimageSrc="/assets/organization/banner.png"
+        description="همکاری هوشمند مدیریت کارآمد"
+        highlightWord={["همکاری", "هوشمند"]}
+        title="ارگانها"
+      />
+      <div className="flex flex-col gap-8 mx-w-6xl mx-auto px-4">
+        <Municipality municipalityData={municipalityData} />
+        <ControlGate controlGateData={controlGateData} />
+        <Bank bankData={bankData} />
+      </div>
+      <Insurance insuranceData={insuranceData} />
     </>
   );
 }

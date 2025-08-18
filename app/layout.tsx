@@ -2,9 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Providers } from "./provider";
 import Header from "./_components/Header";
 import Footer from "./_components/footer/main";
+import { Providers } from "./provider";
 
 export const metadata: Metadata = {
   title: "شرکت حمل و نقل | خدمات لجستیک و حمل بار",

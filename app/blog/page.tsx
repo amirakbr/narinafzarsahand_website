@@ -112,7 +112,7 @@ const BlogList = () => {
                   ) : null
               )}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 grid-rows-1 lg:grid-rows-2 gap-4">
               {blogPosts.map(
                 (
                   { isFeatures, blogImage, date, rate, summary, title },

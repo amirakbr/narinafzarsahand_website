@@ -12,15 +12,15 @@ const Info = () => {
         <div className="flex flex-col gap-2">
           <p className="text-slate-500">آدرس</p>
           <div className="flex flex-col gap-2 border border-slate-500 rounded p-2">
-            <p className="text-slate-500 text-lg font-bold">
+            <p className="text-slate-500 font-medium">
               نشانی تهـران: دانشگـاه تربیت مدرس . سـاختـمـان جـوانـه . طبقه دوم.
               کدپستی: ۱۴۱۱۷۱۳۱
             </p>
-            <p className="text-slate-500 text-lg font-bold">
+            <p className="text-slate-500 font-medium">
               نشانی مشهد: خیابان پاسداران . برج فیروزه شرق . طبقه اول اداری.
               کدپستی: ۹۱۳۷۸۴۴۰۵۱
             </p>
-            <p className="text-slate-500 text-lg font-bold">
+            <p className="text-slate-500 font-medium">
               نشانی تبـریـز: خیابان شهید مدرس ، خیابان شهید بهشتی ، مجتمع اداری عتیق2 ، طبقه 3 واحد 337 کدپستی: 5136944410
             </p>
           </div>

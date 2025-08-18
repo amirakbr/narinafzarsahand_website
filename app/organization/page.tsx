@@ -69,7 +69,7 @@ export default function Home() {
         highlightWord={["همکاری", "هوشمند"]}
         title="ارگانها"
       />
-      <div className="flex flex-col gap-8 mx-w-6xl mx-auto px-4">
+      <div className="flex flex-col gap-8 mx-w-6xl mx-auto px-4 my-8">
         <Municipality municipalityData={municipalityData} />
         <ControlGate controlGateData={controlGateData} />
         <Bank bankData={bankData} />

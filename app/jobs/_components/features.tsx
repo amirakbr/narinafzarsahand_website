@@ -27,18 +27,13 @@ const Features = ({ item }: IFeatureProps) => {
           ${isHovered ? "bg-white" : "bg-gray-900"}
         `}
       />
-
-      {/* <img
-        src={isHovered ? item.hoverImage : item.image}
-        alt={item.title}
-        width={60}
-        className="mx-auto"
-      /> */}
       <img
         src={item.image}
         alt="icon"
-        className="mx-auto filter grayscale invert group-hover:invert-0"
         width={60}
+        className={`mx-auto transition duration-300 ${
+          isHovered ? "invert brightness-0" : ""
+        }`}
       />
     </div>
   );

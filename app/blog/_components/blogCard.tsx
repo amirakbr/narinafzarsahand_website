@@ -13,22 +13,22 @@ const BlogCard = ({
   title,
 }: IBlogCardProps) => {
   return (
-    <Card className="cursor-pointer p-0">
+    <Card className="cursor-pointer p-0 shadow-lg rounded-lg">
       <CardBody
         className={`flex gap-2 ${
-          size === "large" ? "flex-col" : "flex-row"
+          size === "large" ? "flex-col justify-between h-full" : "flex-row"
         } p-0`}
       >
         <div
           className={`shrink-0 ${
             size === "large" ? "w-full h-60" : "min-w-60 max-w-60"
-          } relative`}
+          } relative rounded-lg`}
         >
           <Image
             alt={title}
             src={imageUrl}
             fill
-            className="object-cover object-center"
+            className="object-cover object-center rounded-lg"
           />
         </div>
         <div className="flex flex-col gap-4 p-2">

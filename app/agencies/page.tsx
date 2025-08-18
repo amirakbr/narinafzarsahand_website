@@ -110,19 +110,25 @@ const Agencies = () => {
 
   return (
     <>
-      <Banner
-        backGroundimageAlt={bannerData.imageAlt}
-        backGroundimageSrc={bannerData.imageUrl}
-        description={bannerData.description}
-        highlightWord={bannerData.keyWord}
-        title={bannerData.title}
-      />
-      <PrivateAgencies privateAgenciesData={privateAgenciesData} />
-      <Solutions ourSolution={ourSolution} />
-      <Terminals terminalData={terminalData} />
-      <NonPrivateAgencies privateAgenciesData={nonPrivateAgenciesData} />
-      <Javanseir javanseirData={javanseirData} />
-      <KeyFeatures keyFeatures={keyFeatures}/>
+      <div className="flex flex-col gap-16">
+        <Banner
+          backGroundimageAlt={bannerData.imageAlt}
+          backGroundimageSrc={bannerData.imageUrl}
+          description={bannerData.description}
+          highlightWord={bannerData.keyWord}
+          title={bannerData.title}
+        />
+        <div className="flex flex-col gap-16 max-w-7xl container mx-auto">
+          <PrivateAgencies privateAgenciesData={privateAgenciesData} />
+          <Solutions ourSolution={ourSolution} />
+          <Terminals terminalData={terminalData} />
+          <NonPrivateAgencies privateAgenciesData={nonPrivateAgenciesData} />
+        </div>
+        <Javanseir javanseirData={javanseirData} />
+        <div className="flex flex-col gap-16 max-w-7xl container mx-auto">
+          <KeyFeatures keyFeatures={keyFeatures} />
+        </div>
+      </div>
     </>
   );
 };

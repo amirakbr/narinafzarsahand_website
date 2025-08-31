@@ -32,7 +32,7 @@ const SpecializedSolutions = () => {
     ],
   };
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center jusify-center container mx-auto xl:px-8 p-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center jusify-center container mx-auto xl:px-8 p-2 max-w-[1351px]">
       <div className="justify-self-center lg:justify-self-start relative w-3/4 h-[28rem] lg:h-[32rem] max-w-[25rem]">
         <div
           className="w-full h-full bg-cover bg-no-repeat bg-[-24rem] pt-12 pb-20 px-2 text-white relative rounded-xl overflow-hidden"
@@ -47,21 +47,23 @@ const SpecializedSolutions = () => {
         </span>
       </div>
       <div className="flex flex-col gap-4 p-4">
-        <h2 className="text-2xl font-bold text-primary">
+        <h2 className="titleFontSize font-semibold text-primary">
           {SpecializedSolutionsData.title}
         </h2>
-        <p className="text-lg">{SpecializedSolutionsData.label}</p>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm  md:text-2xl font-medium">
+          {SpecializedSolutionsData.label}
+        </p>
+        <p className="text-xs md:text-xl text-gray-600 text-justify  ">
           {SpecializedSolutionsData.description}
         </p>
-        <p className="text-sm text-gray-600 border-t-2 border-t-primary pt-2">
+        <p className="text-xs md:text-xl text-gray-600 border-t-2 border-t-primary pt-2 text-justify">
           {SpecializedSolutionsData.featuring}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
           {SpecializedSolutionsData.features.map((feature, index) => (
             <span
               key={`specialized-feature-${index}`}
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 text-xs md:text-xl"
             >
               <CheckCircle color="blue" />
               {feature.label}

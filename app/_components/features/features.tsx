@@ -53,12 +53,14 @@ const Features = () => {
   };
   return (
     <>
-      <div className="flex flex-col gap-16 px-8 mx-auto container">
+      <div className="flex flex-col gap-16 md:px-8 mx-auto container">
         <div className="flex flex-col gap-4 px-4">
-          <h6 className="text-2xl font-bold text-primary">
+          <h6 className="titleFontSize font-bold text-primary">
             {featureData.title}
           </h6>
-          <p className="text-sm text-gray-600">{featureData.description}</p>
+          <p className="subTitleFontSize text-gray-600 text-justify">
+            {featureData.description}
+          </p>
           <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.3fr] gap-4">
             <div className="h-full">
               {featureData.features
@@ -78,10 +80,10 @@ const Features = () => {
                     </div>
 
                     <div className="flex flex-col gap-2 xl:pb-8 xl:pt-4 xl:px-6">
-                      <h6 className="text-lg text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
+                      <h6 className="text-sm md:text-xl xl:text-2xl text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
                         {label}
                       </h6>
-                      <p className="line-clamp-2 xl:line-clamp-[unset] text-sm">
+                      <p className="line-clamp-2 xl:line-clamp-[unset] text-xs md:text-base xl:text-xl text-justify">
                         {description}
                       </p>
                     </div>
@@ -107,10 +109,10 @@ const Features = () => {
                     </div>
 
                     <div className="flex flex-col gap-2 xl:p-6 xl:py-2">
-                      <h6 className="text-lg text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
+                      <h6 className="text-sm xl:text-lg font-bold text-primary font-bold border-b-2 border-b-primary lg:max-w-3/4">
                         {label}
                       </h6>
-                      <p className="line-clamp-2 xl:line-clamp-[unset] text-sm">
+                      <p className="line-clamp-2 xl:line-clamp-[unset] text-xs xl:text-base text-justify">
                         {description}
                       </p>
                     </div>

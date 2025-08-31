@@ -17,3 +17,15 @@
 }
 
 @custom-variant hover (&:hover);
+
+.font9px {
+  @apply text-[16px] xl:text-[23px];
+}
+
+.titleFontSize {
+  @apply text-[16px] md:text-[27px] xl:text-[32px];
+}
+
+.subTitleFontSize {
+  @apply text-[14px] md:text-[19px] xl:text-[24px];
+}

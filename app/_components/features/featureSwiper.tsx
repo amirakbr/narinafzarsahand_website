@@ -37,8 +37,12 @@ const FeaturesSwiper = () => {
   };
   return (
     <div className="flex flex-col gap-4 px-4">
-      <h6 className="text-2xl font-bold text-primary">{yourNeeds.title}</h6>
-      <p className="text-sm text-gray-600">{yourNeeds.description}</p>
+      <h6 className="titleFontSize font-bold text-primary">
+        {yourNeeds.title}
+      </h6>
+      <p className="subTitleFontSize text-gray-600 text-justify">
+        {yourNeeds.description}
+      </p>
       <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 gap-4">
         {yourNeeds.solutions?.map(({ image, label }, index) => (
           <div
@@ -53,7 +57,7 @@ const FeaturesSwiper = () => {
                 className="object-cover object-center"
               />
             </div>
-            <h6 className="text-center text-primary text-lg font-semibold border-b-2 border-b-primary pb-1">
+            <h6 className="text-center text-primary text-2xl font-semibold border-b-2 border-b-primary pb-1">
               {label}
             </h6>
           </div>
@@ -89,7 +93,7 @@ const FeaturesSwiper = () => {
                     className="object-cover object-center"
                   />
                 </div>
-                <h6 className="text-center text-primary text-lg font-semibold border-b-2 border-b-primary pb-1">
+                <h6 className="text-center text-primary text-sm font-semibold border-b-2 border-b-primary pb-1">
                   {label}
                 </h6>
               </div>

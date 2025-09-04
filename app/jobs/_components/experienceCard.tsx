@@ -6,21 +6,23 @@ import { Autoplay } from "swiper/modules";
 
 const ExperienceCard = ({ experienceCard }: IExperienceCardProps) => {
   return (
-    <>
+    <div>
       <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4 mx-30 ">
         {experienceCard.map((exp, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 p-4 "
+            className="grid grid-cols-1 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 p-8 "
           >
             <div className="flex">
-              <img
-                src={exp.avatar.url}
-                alt={exp.avatar.alt}
-                className="w-20 h-20 rounded-full object-cover object-top"
-              />
-              <div className="mx-2 w-1/2">
-                <h3 className="text-right font-bold text-lg lg:text-xl mt-2 text-primary">
+              <div>
+                <img
+                  src={exp.avatar.url}
+                  alt={exp.avatar.alt}
+                  className="w-20 h-20 rounded-full object-cover object-top"
+                />
+              </div>
+              <div className="mx-2 w-full">
+                <h3 className="text-right text-sm xl:text-3xl mt-2 text-primary">
                   {exp.name}
                 </h3>
                 <p className="text-md text-rigth text-gray-600 mt-1">
@@ -31,7 +33,7 @@ const ExperienceCard = ({ experienceCard }: IExperienceCardProps) => {
             </div>
 
             {exp.desc && (
-              <p className="text-md text-gray-500 mt-1 text-justify">
+              <p className="text-sm xl:text-2xl text-gray-500 mt-1 text-justify">
                 {exp.desc}
               </p>
             )}
@@ -79,7 +81,7 @@ const ExperienceCard = ({ experienceCard }: IExperienceCardProps) => {
           ))}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 export default ExperienceCard;

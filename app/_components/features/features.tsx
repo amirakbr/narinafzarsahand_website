@@ -55,7 +55,7 @@ const Features = () => {
     <>
       <div className="flex flex-col gap-16 md:px-8 mx-auto container">
         <div className="flex flex-col gap-4 px-4">
-          <h6 className="titleFontSize font-bold text-primary">
+          <h6 className="landingTitleFontSize font-bold text-primary">
             {featureData.title}
           </h6>
           <p className="subTitleFontSize text-gray-600 text-justify">

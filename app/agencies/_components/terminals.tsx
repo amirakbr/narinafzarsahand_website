@@ -20,7 +20,7 @@ const Terminals = ({ terminalData }: ITerminalProps) => {
               />
             </div>
           </div>
-          <p className="text-slate-500 group-hover:text-primary transition-all ease-linear text-lg font-semibold">
+          <p className="text-slate-500 group-hover:text-primary transition-all ease-linear p-font-size font-semibold">
             {label}
           </p>
         </div>

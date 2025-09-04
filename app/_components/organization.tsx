@@ -62,7 +62,7 @@ const Organization = () => {
         <span className="absolute inset-0 backdrop-grayscale-100 backdrop-blur-sm"></span>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3 p-4 py-6 rounded-lg bg-gradient-to-r from-primary-400/50 to-primary-900/90 text-white z-[10] relative container mx-auto max-w-[1351px] min-h-[394px]">
           <div className="flex flex-col gap-5">
-            <h4 className="titleFontSize font-bold">
+            <h4 className="landingTitleFontSize font-bold">
               {organizationData.title}
             </h4>
             <p className="text-sm md:text-2xl font-medium text-justify">

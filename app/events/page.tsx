@@ -20,10 +20,10 @@ const Events = () => {
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-6">
           <div className="flex flex-col gap-4">
-            <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+            <h4 className="text-right font-bold title-font-size text-primary">
               سامانه هوشمند مدیریت حمل‌ونقل زائران
             </h4>
-            <p className="lg:text-lg text-justify">
+            <p className="p-font-size text-justify">
               اربعین حسینی، بزرگترین اجتماع مذهبی جهان، سالانه میلیونها زائر را
               به کربلا جذب میکند. اما بازگشت این حجم عظیم زائران به شهرهای داخلی
               ایران همواره با چالشهای متعددی همراه بوده است. مشکلاتی همچون
@@ -52,7 +52,7 @@ const Events = () => {
         </div>
         <div className="w-full">
           <Benefits />
-          <p className="my-3 lg:text-lg text-justify">
+          <p className="my-3 p-font-size text-justify">
             سرعت خدمترسانی، رفع ازدحام در پایانهها، مدیریت پایانه، سهولت در تهیه
             بلیط، استفاده بهینه از زیرساختها، تنظیم ظرفیتها با نیاز زائرین،
             مدیریت تقاضای لحظهای و تامین رفاه زائران از جمله مزیتهای طرح

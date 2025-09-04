@@ -71,7 +71,7 @@ const Hero = () => {
                       {title}
                     </h1>
                     <p className="font-medium text-sm md:text-xl leading-relaxed text-justify">
-                      {description}{" "}
+                      {description}
                     </p>
                     <div className="border-t-1 border-t-white text-xs md:text-xl pt-1">
                       {footer}

@@ -118,7 +118,7 @@ const Agencies = () => {
           highlightWord={bannerData.keyWord}
           title={bannerData.title}
         />
-        <div className="flex flex-col gap-16 max-w-7xl container mx-auto">
+        <div className="flex flex-col gap-16 max-w-10xl container mx-auto px-6">
           <PrivateAgencies privateAgenciesData={privateAgenciesData} />
           <Solutions ourSolution={ourSolution} />
           <Terminals terminalData={terminalData} />

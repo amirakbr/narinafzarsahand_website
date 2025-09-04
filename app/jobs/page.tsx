@@ -1,4 +1,3 @@
-
 import Banner from "../_components/banner/banner";
 import IntroSection from "../_components/introSection/inddex";
 import DetailJob from "./_components/detailJob";
@@ -112,7 +111,7 @@ const Jobs = () => {
             desc="ما در نارین افزار سهند، به دنبال افراد باانگیزه، خلاق و مشتاق یادگیری هستیم تا در کنار هم، تحولی بزرگ در فناوریهای شما مالی و صنعت حملونقل ایجاد کنیم. اگر دوست دارید در محیطی پویا، حرفهای و دوستانه کار کنید، جایی که ایدههای
 شنیده شود و رشد شغلی واقعی را تجربه کنید، جای شما در تیم ما خالی است!"
           />
-          <h4 className="text-right font-bold text-lg lg:text-3xl text-primary my-4">
+          <h4 className="text-right font-bold title-font-size text-primary my-8">
             به تیم نارین افزار سهند بپیوندید!
           </h4>
           {DetailJobd?.map((item, index) => (
@@ -130,14 +129,14 @@ const Jobs = () => {
             </div>
           ))}
           <hr className="text-primary w-2/3 mt-16 h-1" />
-          <h4 className="text-right font-bold text-lg lg:text-3xl text-primary my-8">
+          <h4 className="text-right font-bold title-font-size text-primary my-8">
             تجربه خانواده نارین افزار سهند
           </h4>
         </div>
         <ExperienceCard experienceCard={experienceCard} />
         <div className="xl:mx-50">
           <hr className="text-primary w-2/3 mt-16 h-1" />
-          <h4 className="text-right font-bold text-lg lg:text-3xl text-primary my-8">
+          <h4 className="text-right font-bold title-font-size text-primary my-8">
             ویژگی های همکاری با ما
           </h4>
           <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-4">

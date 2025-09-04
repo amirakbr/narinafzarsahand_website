@@ -1,4 +1,3 @@
-
 import WhySection from "./_components/features";
 import Timeline from "./_components/timeLine";
 import VideoWithOverlay from "../_components/video";
@@ -25,10 +24,10 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mt-10">
           <div className="">
             <div className="flex flex-col gap-4">
-              <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+              <h4 className="text-right font-bold title-font-size text-primary">
                 نارین افزار سهند
               </h4>
-              <p className="lg:text-lg text-justify">
+              <p className="p-font-size text-justify">
                 ما، به عنوان اولین ارائه‌دهنده پلتفرم جامع مالی در صنعت حمل‌ونقل
                 مسافربین‌شهری در ایران، با هدف تحول در مدیریت مالی، ارتقای کیفیت
                 خدمات و افزایش شفافیت در تراکنش‌ها فعالیت خود را آغاز کردیم. در
@@ -38,8 +37,8 @@ const About = () => {
               </p>
             </div>
             <div className="my-4">
-              <p className="text-justify lg:text-lg">
-                <span className="font-bold lg:text-lg mx-1">
+              <p className="text-justify p-font-size">
+                <span className="font-bold p-font-size mx-1">
                   پلتفرم جامع مالی، همگام با نیاز هر صنعت:
                 </span>
                 نارین افزار سهند با ارائه راهکارهای مالی هوشمند و انعطاف‌پذیر،
@@ -60,19 +59,19 @@ const About = () => {
           </div>
         </div>
         <div className="my-2">
-          <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+          <h4 className="text-right font-bold title-font-size text-primary">
             مأموریت و چشم‌انداز ما
           </h4>
-          <p className=" mt-3 lg:text-lg text-justify">
-            <span className="font-bold text-lg mx-1">
+          <p className=" mt-3 p-font-size text-justify">
+            <span className="font-bold p-font-size mx-1">
               مأموریت نارین افزار سهند:
             </span>
             ارائه راهکارهای نوآورانه در حوزه فین‌تک برای مدیریت مالی هوشمند و
             بهینهسازی سیستمهای حملونقل، با تأکید بر افزایش شفافیت مالی، بهبود
             تجربه مسافران و کاهش هزینههای عملیاتی.
           </p>
-          <p className=" mt-3 lg:text-lg text-justify">
-            <span className="font-bold mx-1">
+          <p className=" mt-3 p-font-size text-justify">
+            <span className="font-bold p-font-size mx-1">
               چشم‌انداز نارین افزار سهند:
             </span>
             تبدیل‌شدن به پیشروترین شرکت ارائه‌دهنده خدمات مالی هوشمند در صنعت
@@ -81,13 +80,13 @@ const About = () => {
           </p>
         </div>
         <div className="my-12">
-          <h4 className="text-right font-bold text-lg lg:text-2xl text-primary my-3">
+          <h4 className="text-right font-bold title-font-size text-primary my-3">
             ارزش‌های نارین افزار سهند
           </h4>
 
           <ul className="list-disc pr-5 space-y-2 text-right">
             {features?.map((item, index) => (
-              <li key={index} className="lg:text-lg">
+              <li key={index} className="p-font-size">
                 {item}
               </li>
             ))}

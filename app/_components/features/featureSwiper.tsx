@@ -37,7 +37,7 @@ const FeaturesSwiper = () => {
   };
   return (
     <div className="flex flex-col gap-4 px-4">
-      <h6 className="titleFontSize font-bold text-primary">
+      <h6 className="landingTitleFontSize font-bold text-primary">
         {yourNeeds.title}
       </h6>
       <p className="subTitleFontSize text-gray-600 text-justify">

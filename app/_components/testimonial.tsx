@@ -69,14 +69,16 @@ const Testimonial = () => {
           >
             <div className="flex items-center gap-4 mb-2 border-b-2 border-b-primary pb-2 ">
               {item?.icon}
-              <h3 className="text-xs md:text-2xl font-bold">{item?.title}</h3>
+              <h3 className="text-base md:text-lg xl:text-2xl font-bold">
+                {item?.title}
+              </h3>
             </div>
-            {item?.links.map((link, linkIndex) => (
-              <div key={linkIndex} className="flex items-center gap-2 my-1">
+            {item?.links?.map((link, linkIndex) => (
+              <div key={linkIndex} className="flex items-center gap-2 my-2">
                 <span className="w-1 md:w-2 h-1 md:h-2 bg-gray-700 rounded-full"></span>
                 <a
                   href={link?.url}
-                  className="hover:underline text-xs md:text-base font-semibold "
+                  className="hover:underline text-xs md:textsm xl:text-base font-semibold "
                 >
                   {link?.label}
                 </a>

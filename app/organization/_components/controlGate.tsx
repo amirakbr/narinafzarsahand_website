@@ -10,15 +10,15 @@ const ControlGate = ({ controlGateData }: IControlGateProps) => {
       backGroundimageSrc="/assets/organization/controlGate.png"
       classNames={{
         container: "!p-0 self-stretch",
-        image:'object-center'
+        image: "object-center",
       }}
     >
-      <div className="flex flex-col gap-8 h-full p-2 py-8 justify-center xl:max-w-5xl mx-auto">
-        <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-xl">{subTitle}</p>
-        <p className="text-lg">{description}</p>
+      <div className="flex flex-col gap-8 h-full p-2 py-8 justify-center mx-auto">
+        <h3 className="title-font-size font-bold">{title}</h3>
+        <p className="text-base xl:text-3xl">{subTitle}</p>
+        <p className="p-font-size text-justify">{description}</p>
         <div className="flex flex-col lg:flex-row gap-8 justify-between relative">
-          <ul className="flex flex-col gap-2 list-disc list-inside">
+          <ul className="flex flex-col gap-2 list-disc list-inside p-font-size">
             {features?.map((feature, index) => (
               <li key={`control gate feature ${index}`}>{feature}</li>
             ))}

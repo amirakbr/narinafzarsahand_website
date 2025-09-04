@@ -12,7 +12,7 @@ const SuccessCard = ({ description, id, title }: ISuccessCardProps) => {
         </p>
       </div>
       <div className="bg-white/70 group-hover:bg-white group-active:bg-white transition-all p-2 py-4 text-black block flex-grow-1 px-4">
-        <p className="text-sm font-medium text-justify text-xs md:text-base xl:text-lg ">
+        <p className="text-sm font-medium text-justify text-xs md:text-base ">
           {description}
         </p>
       </div>

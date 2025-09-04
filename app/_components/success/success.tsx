@@ -9,8 +9,8 @@ const Success = () => {
   };
   return (
     <div className="flex flex-col gap-16">
-      <div className="px-8 mx-auto container flex flex-col gap-4 px-8">
-        <h6 className="titleFontSize font-bold text-primary">
+      <div className="px-4 mx-auto container flex flex-col gap-4">
+        <h6 className="landingTitleFontSize font-bold text-primary">
           {successData.title}
         </h6>
         <p className="subTitleFontSize text-gray-600">

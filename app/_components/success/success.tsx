@@ -13,7 +13,7 @@ const Success = () => {
         <h6 className="landingTitleFontSize font-bold text-primary">
           {successData.title}
         </h6>
-        <p className="subTitleFontSize text-gray-600">
+        <p className="subTitleFontSize text-gray-600 text-justify">
           {successData.description}
         </p>
       </div>

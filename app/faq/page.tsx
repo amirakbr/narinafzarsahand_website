@@ -142,14 +142,14 @@ const FAQ = () => {
                           ) : (
                             <Plus className="w-5 h-5 text-slate-700" />
                           )}
-                          <p className="text-right text-sm md:text-lg xl:text-3xl font-medium ">
+                          <p className="text-right text-base md:text-lg xl:text-3xl font-medium ">
                             {question}
                           </p>
                         </div>
                       }
                     >
                       <Divider className="mb-2" />
-                      <p className="text-slate-700 text-base md:text-lg text-justify">
+                      <p className="text-slate-700 text-sm md:text-lg text-justify">
                         {answer}
                       </p>
                     </AccordionItem>

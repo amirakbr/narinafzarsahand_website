@@ -13,7 +13,7 @@ const Features = ({ item }: IFeatureProps) => {
     >
       <h5
         className={`
-    text-center font-bold text-sm md:text-lg  my-2
+    text-center font-bold text-base text-2xl  my-2
     transition-colors duration-300
     ${isHovered ? "text-white" : "text-black"}
   `}

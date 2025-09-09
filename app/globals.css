@@ -17,3 +17,23 @@
 }
 
 @custom-variant hover (&:hover);
+
+.font9px {
+  @apply text-[16px] xl:text-[23px];
+}
+
+.landingTitleFontSize {
+  @apply text-[16px] md:text-[27px] xl:text-[32px];
+}
+
+.subTitleFontSize {
+  @apply text-[14px] md:text-[19px] xl:text-[24px];
+}
+
+.title-font-size {
+  @apply text-[16px] md:text-[27px] xl:text-[35px];
+}
+
+.p-font-size {
+  @apply text-[14px] md:text-[20px] xl:text-[27px];
+}

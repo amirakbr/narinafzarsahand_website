@@ -56,7 +56,7 @@ export default function Timeline() {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4 py-16 hidden md:block">
-        <h2 className="text-2xl font-bold text-primary text-center my-12">
+        <h2 className="title-font-size font-bold text-primary text-center my-12">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
         <div className="relative">
@@ -95,7 +95,7 @@ export default function Timeline() {
               {/* کارت */}
               <div className="w-5/12  rounded-lg p-6 relative z-10">
                 <span
-                  className={`flex  top-1/2 -translate-y-1/2 font-bold text-lg bg-white rounded-md py-4 px-4 shadow-md text-primary ${
+                  className={`flex  top-1/2 -translate-y-1/2 md:text-xl xs:text-3xl bg-white rounded-md py-4 px-4 shadow-md text-primary ${
                     item?.side === "left"
                       ? "justify-self-end"
                       : "justify-self-start"
@@ -103,10 +103,10 @@ export default function Timeline() {
                 >
                   {item?.year}
                 </span>
-                <h3 className="lg:text-lg font-semibold text-gray-700  mb-3">
+                <h3 className="md:text-lg xs:text-2xl font-bold text-gray-700  mb-3">
                   {item?.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed ">
+                <p className="text-gray-600 leading-relaxed md:text-lg xl:text-2xl text-justify">
                   {item?.description}
                 </p>
               </div>
@@ -116,7 +116,7 @@ export default function Timeline() {
       </div>
 
       <div className="block md:hidden px-5 mt-16">
-        <h2 className="text-lg font-bold text-primary text-center ">
+        <h2 className="title-font-size font-bold text-primary text-center ">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
         {timelineData?.map((item, index) => (
@@ -133,7 +133,7 @@ export default function Timeline() {
           ${item?.side === "left" ? "-right-6 flex-row-reverse" : "-left-6"}
         `}
             >
-              <span className="flex font-bold text-lg bg-white rounded-md py-2 px-3 shadow-md text-primary">
+              <span className="flex font-bold text-base bg-white rounded-md py-2 px-3 shadow-md text-primary">
                 {item?.year}
               </span>
               <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
@@ -146,11 +146,11 @@ export default function Timeline() {
               </div>
             </div>
             <div className="mt-14">
-              <h3 className=" font-semibold text-gray-700 mb-3">
+              <h3 className=" font-semibold text-gray-700 mb-3 text-sm justify-text">
                 {item?.title}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed text-justify">
+              <p className="text-gray-600 leading-relaxed text-justify text-xs">
                 {item?.description}
               </p>
             </div>

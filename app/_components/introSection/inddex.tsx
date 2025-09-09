@@ -6,11 +6,11 @@ const IntroSection = ({ desc, icon, iconTitle, title }: IIntroSectionProps) => {
       <h3 className="text-right font-bold text-lg lg:text-2xl text-primary">
         {title}
       </h3>
-      {desc && <p className="lg:text-lg text-justify">{desc}</p>}
+      {desc && <p className="p-font-size text-justify">{desc}</p>}
       {icon && (
         <div className="flex justify-start mt-3">
           <img src={icon?.url} alt={icon?.alt} />
-          <p className="lg:text-lg text-primary">{iconTitle}</p>
+          <p className="p-font-size text-primary">{iconTitle}</p>
         </div>
       )}
       <hr className="text-primary w-1/2 mt-5 h-1" />

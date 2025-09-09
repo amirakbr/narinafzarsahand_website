@@ -3,7 +3,7 @@ import { Building, LightbulbIcon, Map, Newspaper } from "lucide-react";
 const Testimonial = () => {
   const TestimonialData = [
     {
-      icon: <Newspaper color="blue"/>,
+      icon: <Newspaper color="blue" />,
       title: "اخبار روز",
       links: [
         {
@@ -17,7 +17,7 @@ const Testimonial = () => {
       ],
     },
     {
-      icon: <Building color="blue"/>,
+      icon: <Building color="blue" />,
       title: "مشتریان",
       links: [
         {
@@ -31,7 +31,7 @@ const Testimonial = () => {
       ],
     },
     {
-      icon: <Map color="blue"/>,
+      icon: <Map color="blue" />,
       title: "شهرها",
       links: [
         {
@@ -45,7 +45,7 @@ const Testimonial = () => {
       ],
     },
     {
-      icon: <LightbulbIcon color="blue"/>,
+      icon: <LightbulbIcon color="blue" />,
       title: "پروژه‌ها",
       links: [
         {
@@ -61,21 +61,26 @@ const Testimonial = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-16 p-8 -top-20 relative z-[11] container mx-auto md:px-2">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-2 sm:p-8 -top-20 relative z-[11] container mx-auto px-4 xl:px-12">
         {TestimonialData.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-4 py-8 rounded-sm shadow-md shadow-slate-800"
+            className="bg-white p-2 sm:p-4 rounded-sm shadow-md shadow-slate-800 2xl:w-[90%] xl:h-[180px]"
           >
-            <div className="flex items-center gap-4 mb-2 border-b-2 border-b-primary pb-2">
-              {item.icon}
-              <h3 className="text-lg font-bold">{item.title}</h3>
+            <div className="flex items-center gap-4 mb-2 border-b-2 border-b-primary pb-2 ">
+              {item?.icon}
+              <h3 className="text-base md:text-lg xl:text-2xl font-bold">
+                {item?.title}
+              </h3>
             </div>
-            {item.links.map((link, linkIndex) => (
-              <div key={linkIndex} className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-primary rounded-full mt-1"></span>
-                <a href={link.url} className="hover:underline">
-                  {link.label}
+            {item?.links?.map((link, linkIndex) => (
+              <div key={linkIndex} className="flex items-center gap-2 my-2">
+                <span className="w-1 md:w-2 h-1 md:h-2 bg-gray-700 rounded-full"></span>
+                <a
+                  href={link?.url}
+                  className="hover:underline text-xs md:textsm xl:text-base font-semibold "
+                >
+                  {link?.label}
                 </a>
               </div>
             ))}

@@ -63,11 +63,11 @@ const SuccessCardContainer = () => {
       style={{
         backgroundImage: `url(/assets/landingImage/achivment.png)`,
       }}
-      className="bg-cover bg-no-repeat lg:bg-[center_-10rem] p-4 sm:p-10 text-white relative"
+      className="bg-cover bg-no-repeat xl:bg-[center_-10rem] p-4 sm:px-10 md:py-20 text-white relative flex items-center"
     >
       <span className="absolute inset-0 backdrop-grayscale-100"></span>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 container mx-auto px-4 z-[1]">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 container mx-auto px-4 z-[1]">
         {successCardData.map((item, index) => (
           <SuccessCard {...item} key={`success card ${index}`} />
         ))}

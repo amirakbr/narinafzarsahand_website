@@ -7,13 +7,13 @@ const Benefits = () => {
   ];
   return (
     <div className="my-12 flex flex-col gap-4">
-      <h4 className="text-right font-bold text-lg lg:text-2xl text-primary">
+      <h4 className="text-right font-bold title-font-size text-primary">
         مزایای طرح مدیریت حمل‌ونقل زائران اربعین
       </h4>
 
       <ul className="list-disc pr-5 space-y-2 text-right">
         {features?.map((item, index) => (
-          <li key={index} className="lg:text-lg">
+          <li key={index} className="p-font-size">
             {item}
           </li>
         ))}

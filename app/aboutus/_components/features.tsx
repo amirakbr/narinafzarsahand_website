@@ -27,7 +27,7 @@ export default function WhySection() {
   return (
     <section className=" text-center">
       <div className="container mx-auto px-4">
-        <h4 className="text-right font-bold lg:text-2xl text-primary">
+        <h4 className="text-right font-bold title-font-size text-primary">
           مأموریت و چشم‌انداز ما
         </h4>
         <div className=" hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-3">
@@ -72,7 +72,7 @@ export default function WhySection() {
                     className="w-full h-auto object-cover "
                   />
                 </div>
-                <p className="mt-3 text-lg font-medium text-primary">
+                <p className="mt-3 text-sm font-medium text-primary">
                   {item.title}
                 </p>
               </div>

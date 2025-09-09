@@ -21,7 +21,9 @@ const BlogCard = ({
       >
         <div
           className={`shrink-0 ${
-            size === "large" ? "w-full h-60" : "min-w-60 max-w-60"
+            size === "large"
+              ? "w-full h-60"
+              : "w-[134px] md:h-full md:min-w-60 md:max-w-60"
           } relative rounded-lg`}
         >
           <Image
@@ -31,39 +33,43 @@ const BlogCard = ({
             className="object-cover object-center rounded-lg"
           />
         </div>
-        <div className="flex flex-col gap-4 p-2">
+        <div className="flex flex-col gap-1 p-2">
           <div className="flex items-center gap-4 justify-between text-primary border-b-2 border-b-primary pb-2">
             <div className="flex items-center gap-2 ">
               <Calendar size={size === "large" ? 20 : 15} />
-              <p className={`${size === "large" ? "text-xl" : "text-sm"}`}>
+              <p
+                className={`font-bold ${
+                  size === "large" ? "text-xl" : "text-[9px] md:text-xs"
+                }`}
+              >
                 {publishDate}
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <Rating rate={rate} size={size === "large" ? 20 : 15} />
+            <div className="flex items-center gap-2 ">
+              <Rating rate={rate} size={size === "large" ? 20 : 13} />
             </div>
           </div>
-          <div className="flex flex-col gap-2 text-right">
+          <div className="flex flex-col gap-1 text-right">
             <p
-              className={`${
-                size === "large" ? "text-xl" : "text-lg"
+              className={`text-justify ${
+                size === "large" ? "p-font-size" : "text-sm lg:text-xl"
               } font-bold`}
             >
               {title}
             </p>
             <p
-              className={`${
+              className={`text-justify ${
                 size === "large"
-                  ? "line-clamp-4 text-lg"
-                  : "line-clamp-2 text-sm"
+                  ? "line-clamp-4 text-sm xl:text-2xl"
+                  : "line-clamp-2 text-xs lg:text-lg"
               }`}
             >
               {summary}
             </p>
-            <CardFooter className="flex items-center justify-end text-primary group p-0 gap-2">
+            <CardFooter className="flex items-center justify-end text-primary group p-0 gap-2 md:mt-6">
               <p
-                className={`${
-                  size === "large" ? "text-lg" : "text-sm"
+                className={`text-justify  ${
+                  size === "large" ? "text-lg" : "text-[9px] md:text-xs"
                 } right-0 transition-all group-hover:right-4`}
               >
                 مطالعه ادامه مطلب

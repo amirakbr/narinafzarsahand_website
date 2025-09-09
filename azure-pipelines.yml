@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: afranet
+  name: default
 
 steps:
 - task: NodeTool@0

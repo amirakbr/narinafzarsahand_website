@@ -1,5 +1,9 @@
+"use client";
 import Banner from "../_components/banner/banner";
 import BlogCard from "./_components/blogCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const BlogList = () => {
   const blogPosts = [
@@ -80,8 +84,8 @@ const BlogList = () => {
         highlightWord={["جدیدترین"]}
         title="بلاگ"
       />
-      <div className="flex flex-col gap-8 container mx-auto px-8">
-        <p className="text-lg font-medium pb-2 border-b-2 border-b-primary">
+      <div className="flex flex-col gap-8 container mx-auto px-4 md:px-8 mt-10">
+        <p className="text-justify p-font-size font-medium pb-8 border-b-2 border-b-primary">
           در دنیای امروز، مدیریت مالی هوشمند و یکپارچه نقش کلیدی در بهبود عملکرد
           صنایع مختلف دارد. در وبلاگ نارین افزار سهند میتوانید با جدیدترین
           فناوری‌های مالی، روندهای دیجیتال، نوآوری‌های فین‌تک و راهکارهای مدیریت
@@ -89,10 +93,48 @@ const BlogList = () => {
           سیستم‌های مالی، اطلاعات دقیق و کاربردی در اختیار شما قرار دهیم.
         </p>
         <div className="flex flex-col gap-8">
-          <h2 className="text-2xl font-bold text-primary">
+          <h2 className="text-base lg:text-xl font-bold text-primary">
             جدیدترین مقاالت و رویدادها
           </h2>
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.3fr_1fr]">
+          <div className="grid grid-cols-1 gap-4 xl:grid-cols-[1.3fr_1fr]">
+            <div className="flex xl:hidden mb-10">
+              <Swiper
+                breakpoints={{
+                  100: {
+                    slidesPerView: 1,
+                  },
+                  700: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                }}
+                autoplay={{ delay: 1000 }}
+                modules={[Autoplay]}
+              >
+                {blogPosts?.map(
+                  (
+                    { isFeatures, blogImage, date, rate, summary, title },
+                    index
+                  ) => (
+                    <>
+                      {isFeatures ? (
+                        <SwiperSlide key={`blog slide ${index}`}>
+                          <BlogCard
+                            imageUrl={blogImage}
+                            publishDate={date}
+                            rate={rate}
+                            size="large"
+                            summary={summary}
+                            title={title}
+                            key={`featured blog ${index}`}
+                          />
+                        </SwiperSlide>
+                      ) : null}
+                    </>
+                  )
+                )}
+              </Swiper>
+            </div>
             <div className="flex flex-col gap-4">
               {blogPosts.map(
                 (
@@ -112,7 +154,7 @@ const BlogList = () => {
                   ) : null
               )}
             </div>
-            <div className="grid grid-cols-1 grid-rows-1 lg:grid-rows-2 gap-4">
+            <div className="hidden xl:grid grid-cols-1 grid-rows-1 lg:grid-rows-2 gap-4">
               {blogPosts.map(
                 (
                   { isFeatures, blogImage, date, rate, summary, title },

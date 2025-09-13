@@ -84,7 +84,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`antialiased ${iranYekan?.className} ${iranYekan?.variable} text-[#545454]`}
+        className={`antialiased ${iranYekan?.className} ${iranYekan?.variable} text-[#545454] bg-[url(/assets/bg.png)] bg-cover`}
       >
         <Providers>
           <Header />

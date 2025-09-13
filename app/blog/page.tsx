@@ -2,8 +2,9 @@
 import Banner from "../_components/banner/banner";
 import BlogCard from "./_components/blogCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const BlogList = () => {
   const blogPosts = [
@@ -109,14 +110,16 @@ const BlogList = () => {
                   },
                 }}
                 autoplay={{ delay: 1000 }}
-                modules={[Autoplay]}
+                modules={[Autoplay, Pagination]}
+                pagination={{ type: "bullets", clickable: true }}
+                wrapperClass="pb-10"
               >
                 {blogPosts?.map(
                   (
                     { isFeatures, blogImage, date, rate, summary, title },
                     index
                   ) => (
-                    <>
+                    <div key={index}>
                       {isFeatures ? (
                         <SwiperSlide key={`blog slide ${index}`}>
                           <BlogCard
@@ -130,46 +133,50 @@ const BlogList = () => {
                           />
                         </SwiperSlide>
                       ) : null}
-                    </>
+                    </div>
                   )
                 )}
               </Swiper>
             </div>
             <div className="flex flex-col gap-4">
-              {blogPosts.map(
+              {blogPosts?.map(
                 (
                   { isFeatures, blogImage, date, rate, summary, title },
                   index
                 ) =>
                   !isFeatures ? (
-                    <BlogCard
-                      imageUrl={blogImage}
-                      publishDate={date}
-                      rate={rate}
-                      size="small"
-                      summary={summary}
-                      title={title}
-                      key={`blog ${index}`}
-                    />
+                    <div key={index}>
+                      <BlogCard
+                        imageUrl={blogImage}
+                        publishDate={date}
+                        rate={rate}
+                        size="small"
+                        summary={summary}
+                        title={title}
+                        key={`blog ${index}`}
+                      />
+                    </div>
                   ) : null
               )}
             </div>
             <div className="hidden xl:grid grid-cols-1 grid-rows-1 lg:grid-rows-2 gap-4">
-              {blogPosts.map(
+              {blogPosts?.map(
                 (
                   { isFeatures, blogImage, date, rate, summary, title },
                   index
                 ) =>
                   isFeatures ? (
-                    <BlogCard
-                      imageUrl={blogImage}
-                      publishDate={date}
-                      rate={rate}
-                      size="large"
-                      summary={summary}
-                      title={title}
-                      key={`featured blog ${index}`}
-                    />
+                    <div key={index}>
+                      <BlogCard
+                        imageUrl={blogImage}
+                        publishDate={date}
+                        rate={rate}
+                        size="large"
+                        summary={summary}
+                        title={title}
+                        key={`featured blog ${index}`}
+                      />
+                    </div>
                   ) : null
               )}
             </div>

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import FeaturesSwiper from "./featureSwiper";
+import { IFeaturesProps } from "../interface";
 
-const Features = () => {
+const Features = ({ data, solutionData }: IFeaturesProps) => {
   const featureData = {
     title: "شتاب دهندهی موفقیت شما",
     description: `نـارین افـزار سهنـد بـا طـراحی پلتفـرمهـای مـالی هـوشمند و محصـوالت خـاص که متنـاسب بـا

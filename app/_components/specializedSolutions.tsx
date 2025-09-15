@@ -1,6 +1,7 @@
 import { CheckCircle, PlayCircle } from "lucide-react";
+import { ISpecializedSolutionsProps } from "./interface";
 
-const SpecializedSolutions = () => {
+const SpecializedSolutions = ({ data }: ISpecializedSolutionsProps) => {
   const SpecializedSolutionsData = {
     title: "راهکارهای تخصصی",
     label: "نارین افزار سهند ارائه دهنده راهکار‌های مالی برای کسب و کار شما",

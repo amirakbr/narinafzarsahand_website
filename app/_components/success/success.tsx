@@ -1,6 +1,7 @@
+import { ISuccessProps } from "../interface";
 import SuccessCardContainer from "./successCardContainer";
 
-const Success = () => {
+const Success = ({ data }: ISuccessProps) => {
   const successData = {
     title: "دستاوردهای نارین افزار سهند",
     description: `این دستآوردها گواهی بر تالشها و ابتکارات شرکت نارین افزار سهند در جهت تحول

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { IOrganizationProps } from "./interface";
 
-const Organization = () => {
+const Organization = ({data}:IOrganizationProps) => {
   const organizationData = {
     title: "تکیه گاه امِن شما",
     description: `نارین افزار سهند از سال ۱۳۹۷ فعالیت خود را آغاز کرده و با افتخار مورد

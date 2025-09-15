@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Button } from "@heroui/react";
 import { Autoplay } from "swiper/modules";
+import { IHeroLandingProps } from "./interface";
 
-const Hero = () => {
+const Hero = ({heroData}:IHeroLandingProps) => {
   const swiperData = [
     {
       title: "پلتفرم جامع مالی، همگام با نیاز هر صنعت",

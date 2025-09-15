@@ -1,6 +1,7 @@
 import { Building, LightbulbIcon, Map, Newspaper } from "lucide-react";
+import { ITestimonialProps } from "./interface";
 
-const Testimonial = () => {
+const Testimonial = ({ data }: ITestimonialProps) => {
   const TestimonialData = [
     {
       icon: <Newspaper color="blue" />,

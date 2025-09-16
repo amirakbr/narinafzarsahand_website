@@ -1,69 +1,19 @@
 // components/Timeline.js
 import Image from "next/image";
+import { ITimeLineProps } from "../interface";
 
-const timelineData = [
-  {
-    year: "۱۳۹۷-۱۳۹۹",
-    title: "شروع فعالیت برند تجاری نازین افزار سهند",
-    description:
-      "به عنوان نخستین شتاب‌دهنده خدمات مالی در زمینه حمل‌ونقل مسافر بین‌شهری، از سال ۱۳۹۷ با هدف ساماندهی مالی و هوشمندسازی این صنعت فعالیت خود را آغاز کردیم و با تکیه بر تجربه و فناوری روز، تحول سیستم‌های مالی را رقم زدیم.",
-    icon: "/assets/aboutUs/icons8-time-60.png",
-    side: "left",
-  },
-  {
-    year: "۱۳۹۹-۱۴۰۰",
-    title: "توسعه اولین پلتفرم جامع مالی و طراحی محصولات",
-    description:
-      "انعطاف‌پذیری بالا و قابلیت بومی‌سازی برای هر شهر و صنعت، امکان سامانه‌های مالی، مدیریت تراکنش‌ها و افزایش شفافیت را برای شرکت‌های مسافربری، شهرداری‌ها و سایر نهادهای مرتبط فراهم می‌نماید.",
-    icon: "/assets/aboutUs/icons8-time-60.png",
-    side: "right",
-  },
-  {
-    year: "۱۴۰۰-۱۴۰۱",
-    title: "همکاری گسترده با ارگان‌ها و راه‌اندازی سیستم مدیریت مالی یکپارچه",
-    description:
-      "با همکاری شهرداری‌ها، شرکت‌های مسافربری و بانک‌ها راهکارهای مالی نوین برای مدیریت پرداخت‌ها ارائه دادیم.",
-    icon: "/assets/aboutUs/icons8-time-60.png",
-    side: "left",
-  },
-  {
-    year: "۱۴۰۱-۱۴۰۲",
-    title: "افزایش پوشش خدمات و گسترش شبکه پرداخت آنلاین",
-    description:
-      "با طراحی راهکارهای هوشمند و متناسب با نیاز کسب‌وکارها، فعالیت خود را در صنعت حمل‌ونقل گسترش دادیم.",
-    icon: "/assets/aboutUs/icons8-time-60.png",
-    side: "right",
-  },
-  // {
-  //   year: "1402-03-05",
-  //   title: "ورود امیر اکبرزاده به شرکت",
-  //   description:
-  //     "از ابتدای این زمان با تلاش و کوشش مهندس مجاوری و امیر اکبرزاده ، شرکت در ریل و مسیر پیشرفت به صورت صعودی قرار گرفت .",
-  //   icon: "/assets/aboutUs/icons8-time-60.png",
-  //   side: "right",
-  // },
-  {
-    year: "۱۴۰۲-۱۴۰۳",
-    title: "طراحی و اجرای زیرساخت‌های اختصاصی و بومی‌سازی شده",
-    description:
-      "در نازین افزار سهند با تکیه بر توانمندی‌های بومی و درک عمیق از چالش‌های صنعت، زیرساخت‌های مالی را طراحی و اجرا می‌کنیم.",
-    icon: "/assets/aboutUs/icons8-time-60.png",
-    side: "left",
-  },
-];
-
-export default function Timeline() {
+export default function Timeline({ title, data }: ITimeLineProps) {
   return (
     <>
       <div className="max-w-6xl mx-auto px-4 py-16 hidden md:block">
         <h2 className="title-font-size font-bold text-primary text-center my-12">
-          مسیر رشد و توسعه نازین افزار سهند
+          {title}
         </h2>
         <div className="relative">
           {/* خط وسط */}
           <div className="absolute left-1/2 w-1 bg-gray-200 h-[calc(100%-24px)] -translate-x-1/2" />
 
-          {timelineData.map((item, index) => (
+          {data?.map((item, index) => (
             <div
               key={index}
               className={`mb-16 flex w-full items-start ${
@@ -84,8 +34,8 @@ export default function Timeline() {
                 {/* دایره آبی */}
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center z-10 shadow-lg">
                   <Image
-                    src={item?.icon}
-                    alt={item?.title}
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${item?.icon?.url}`}
+                    alt={item?.icon?.name}
                     width={24}
                     height={24}
                   />
@@ -119,7 +69,7 @@ export default function Timeline() {
         <h2 className="title-font-size font-bold text-primary text-center ">
           مسیر رشد و توسعه نازین افزار سهند
         </h2>
-        {timelineData?.map((item, index) => (
+        {data?.map((item, index) => (
           <div
             key={index}
             className={`w-full p-6 relative z-10 border border-gray-300
@@ -138,8 +88,8 @@ export default function Timeline() {
               </span>
               <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg">
                 <Image
-                  src={item?.icon}
-                  alt={item?.title}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${item?.icon?.url}`}
+                  alt={item?.icon?.name}
                   width={24}
                   height={24}
                 />

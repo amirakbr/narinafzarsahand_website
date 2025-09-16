@@ -2,36 +2,8 @@ import { CheckCircle, PlayCircle } from "lucide-react";
 import { ISpecializedSolutionsProps } from "./interface";
 
 const SpecializedSolutions = ({ data }: ISpecializedSolutionsProps) => {
-  const SpecializedSolutionsData = {
-    title: "راهکارهای تخصصی",
-    label: "نارین افزار سهند ارائه دهنده راهکار‌های مالی برای کسب و کار شما",
-    description: `در دنیای پرشتاب امروز، مدیریت مالی یکی از مهمترین ارکان موفقیت هر کسبوکاری است.
-    با سالها تجربه در حوزه ارائه خدمـات و راهکارهـای مـالی، بـه شمـا کمک
-    "نارین افزار سهند"
-    مینمـاید تـا بـا خیـالی آسـوده بـر رشد و تـوسعـه کسبوکار خـود تمـرکـز کنید.`,
-    featuring: `مـا در نـارین افـزار سهنـد، بـا بهـرهگیری از تیمـی متخصص و ابـزارهـای نـویـن، خدمـاتی کاملا
-    سفـارشی و مطابق بـا نیـازهـای خاص شمـا ارائه میدهیم.`,
-    features: [
-      {
-        label: "مشاوره و نیازسنجی",
-      },
-      {
-        label: "پشتیبانی و آموزش",
-      },
-      {
-        label: "طراحی پلتفرم تخصصی مالی",
-      },
-      {
-        label: "طراحی پلتفرم تخصصی مالی",
-      },
-      {
-        label: "ارتقا و توسعه کسبوکارها",
-      },
-      {
-        label: "هوشمندسازی فرایند مالی",
-      },
-    ],
-  };
+  console.log("SpecializedSolutions", data);
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center jusify-center container mx-auto xl:px-8 p-2 max-w-[1351px]">
       <div className="justify-self-center lg:justify-self-start relative w-3/4 h-[28rem] lg:h-[32rem] max-w-[25rem]">
@@ -49,25 +21,23 @@ const SpecializedSolutions = ({ data }: ISpecializedSolutionsProps) => {
       </div>
       <div className="flex flex-col gap-4 p-4">
         <h2 className="landingTitleFontSize font-semibold text-primary">
-          {SpecializedSolutionsData?.title}
+          {data?.title}
         </h2>
-        <p className="text-sm  md:text-2xl font-medium">
-          {SpecializedSolutionsData?.label}
-        </p>
+        <p className="text-sm  md:text-2xl font-medium">{data?.subtitle}</p>
         <p className="text-xs md:text-xl text-gray-600 text-justify  ">
-          {SpecializedSolutionsData?.description}
+          {data?.description}
         </p>
         <p className="text-xs md:text-xl text-gray-600 border-t-2 border-t-primary pt-2 text-justify">
-          {SpecializedSolutionsData?.featuring}
+          {data?.featureSubtitle}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-          {SpecializedSolutionsData?.features?.map((feature, index) => (
+          {data?.features?.map((feature, index) => (
             <span
-              key={`specialized-feature-${index}`}
+              key={`specialized-feature-${feature?.id}`}
               className="flex items-center gap-1 text-xs md:text-xl"
             >
               <CheckCircle color="blue" />
-              {feature.label}
+              {feature?.text}
             </span>
           ))}
         </div>

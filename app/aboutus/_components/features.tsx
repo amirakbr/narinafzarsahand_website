@@ -3,47 +3,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
+import { IWhySectionProps } from "../interface";
 
-const items = [
-  {
-    img: "/assets/aboutUs/همکاری گسترده--color.png",
-    title: "همکاری گسترده و موثر با کسب‌وکارها",
-  },
-  {
-    img: "/assets/aboutUs/مدیریت مالی هوشمند-color.png",
-    title: "مدیریت مالی هوشمند، شفاف و بدون واسطه",
-  },
-  {
-    img: "/assets/aboutUs/راهکارهای اختصاصی-color.png",
-    title: "راهکارهای اختصاصی و بومی‌سازی‌شده",
-  },
-  {
-    img: "/assets/aboutUs/پلتفرم مالی یکپارچه-color.png",
-    title: "اولین ارائه‌دهنده پلتفرم مالی یکپارچه",
-  },
-];
-
-export default function WhySection() {
+export default function WhySection({ title, featureArray }: IWhySectionProps) {
   return (
     <section className=" text-center">
       <div className="container mx-auto px-4">
         <h4 className="text-right font-bold title-font-size text-primary">
-          مأموریت و چشم‌انداز ما
+          {title}
         </h4>
         <div className=" hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-3">
-          {items?.map((item, index) => (
+          {featureArray?.map((item, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="overflow-hidden rounded-lg">
                 <Image
-                  src={item?.img}
-                  alt={item?.title}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${item?.image?.[0]?.formats?.large?.url}`}
+                  alt={item?.image?.[0]?.name}
                   width={400}
                   height={250}
                   className="w-full h-auto object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 />
               </div>
               <p className="mt-3 lg:text-lg font-medium text-black transition-colors duration-300 group-hover:text-primary">
-                {item?.title}
+                {item?.label}
               </p>
             </div>
           ))}
@@ -60,20 +42,20 @@ export default function WhySection() {
           }}
           loop={true}
         >
-          {items?.map((item, index) => (
-            <SwiperSlide key={index}>
+          {featureArray?.map((item, index) => (
+            <SwiperSlide key={item?.id}>
               <div className="group cursor-pointer">
                 <div className="overflow-hidden rounded-lg">
                   <Image
-                    src={item?.img}
-                    alt={item?.title}
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${item?.image?.[0]?.formats?.large?.url}`}
+                    alt={item?.image?.[0]?.name}
                     width={400}
                     height={250}
                     className="w-full h-auto object-cover "
                   />
                 </div>
                 <p className="mt-3 text-sm font-medium text-primary">
-                  {item.title}
+                  {item?.label}
                 </p>
               </div>
             </SwiperSlide>

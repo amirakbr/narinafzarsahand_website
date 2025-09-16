@@ -6,11 +6,12 @@ import {
   ILandingFeatures,
   ILandingOrganization,
   ILandingSpecializedSolutions,
+  StrapiImage,
 } from "../api/interface";
 
 export interface ISuccessCardProps {
-  title: string;
-  description: string;
+  value: string;
+  label: string;
   id: number;
 }
 export interface IHeroLandingProps {
@@ -20,15 +21,28 @@ export interface ITestimonialProps {
   data: ILandingTestimonials[];
 }
 export interface ISpecializedSolutionsProps {
-  data: ILandingSpecializedSolutions[];
+  data: ILandingSpecializedSolutions;
 }
 export interface IOrganizationProps {
-  data: ILandingOrganization[];
+  data: ILandingOrganization;
 }
 export interface IFeaturesProps {
-  data: ILandingFeatures[];
-  solutionData: ILandingSolution[];
+  data: ILandingFeatures;
+  solutionData: ILandingSolution;
 }
 export interface ISuccessProps {
-  data: ILandingSuccess[];
+  data: ILandingSuccess;
+}
+
+export interface IFeaturesSwiperProps {
+  data: ILandingSolution;
+}
+
+export interface ISuccessCardContainerProps {
+  cover: StrapiImage;
+  successCards: {
+    id: number;
+    value: string;
+    label: string;
+  }[];
 }

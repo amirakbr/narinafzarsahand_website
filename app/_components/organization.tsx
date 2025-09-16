@@ -1,57 +1,7 @@
 import Image from "next/image";
 import { IOrganizationProps } from "./interface";
 
-const Organization = ({data}:IOrganizationProps) => {
-  const organizationData = {
-    title: "تکیه گاه امِن شما",
-    description: `نارین افزار سهند از سال ۱۳۹۷ فعالیت خود را آغاز کرده و با افتخار مورد
-    اعتماد بیش از ۴۰۰ شرکت قرارگرفته است`,
-    comment: `ایجاد نظم و مدیریت مالی، عالوه بر تسهیل فرایندها و پیشرفت کسب وکارها،
-    سبب شده در ارتباط با ارگانهای مربوط هر حوزه مانند شهـرداری، بیمـه و...
-    سسیتم منظـم تـر و رضـایت بخشی شکل بگیرد`,
-    nonPrivate: "شرکت حمل و نقل جوان سیر ایثار",
-    organization: "شهرداری کرمان ، بیمه",
-    private: [
-      { url: "1" },
-      { url: "2" },
-      { url: "3" },
-      { url: "4" },
-      { url: "5" },
-      { url: "6" },
-      { url: "7" },
-      { url: "8" },
-      { url: "9" },
-      { url: "10" },
-      { url: "11" },
-      { url: "12" },
-      { url: "13" },
-      { url: "14" },
-      { url: "15" },
-      { url: "16" },
-      { url: "17" },
-      { url: "18" },
-      { url: "19" },
-      { url: "20" },
-      { url: "21" },
-      { url: "22" },
-      { url: "23" },
-      { url: "24" },
-      { url: "25" },
-      { url: "26" },
-      { url: "27" },
-      { url: "28" },
-      { url: "29" },
-      { url: "30" },
-      { url: "31" },
-      { url: "32" },
-      { url: "33" },
-      { url: "34" },
-      { url: "35" },
-      { url: "36" },
-      { url: "37" },
-      { url: "38" },
-    ],
-  };
+const Organization = ({ data }: IOrganizationProps) => {
   return (
     <>
       <div
@@ -63,23 +13,21 @@ const Organization = ({data}:IOrganizationProps) => {
         <span className="absolute inset-0 backdrop-grayscale-100 backdrop-blur-sm"></span>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 xl:grid-cols-3 p-4 py-6 rounded-lg bg-gradient-to-r from-primary-400/50 to-primary-900/90 text-white z-[10] relative container mx-auto max-w-[1351px] min-h-[394px]">
           <div className="flex flex-col gap-5">
-            <h4 className="landingTitleFontSize font-bold">
-              {organizationData.title}
-            </h4>
+            <h4 className="landingTitleFontSize font-bold">{data?.title}</h4>
             <p className="text-sm md:text-2xl font-medium text-justify">
-              {organizationData.description}
+              {data?.subtitle}
             </p>
             <p className="text-sm md:text-xl text-justify font-thin">
-              {organizationData.comment}
+              {data?.description}
             </p>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col  gap-10">
             <div className="flex flex-col gap-3 text-sm">
               <p className="text-sm md:text-lg xl:text-2xl font-medium w-max border-1 rounded-lg border-white py-1 px-2">
                 سازمان‌های غیرخصوصی
               </p>
               <p className="text-sm md:text-lg xl:text-2xl font-normal border-1 rounded-lg border-white py-1 px-2">
-                {organizationData.nonPrivate}
+                {data?.nonPrivate}
               </p>
             </div>
             <div className="flex flex-col gap-3 text-sm">
@@ -87,7 +35,7 @@ const Organization = ({data}:IOrganizationProps) => {
                 ارگان‌ها
               </p>
               <p className="text-sm md:text-lg xl:text-2xl border-1 rounded-lg border-white py-1 px-2 font-normal">
-                {organizationData.organization}
+                {data?.organization}
               </p>
             </div>
             <p className="text-[19px] font-semibold text-center text-primary-900 bg-white p-2 rounded-lg hidden lg:block">
@@ -96,14 +44,14 @@ const Organization = ({data}:IOrganizationProps) => {
           </div>
           <div className="flex flex-col gap-3 text-sm">
             <p className="text-sm md:text-lg xl:text-2xl font-medium w-max border-1 rounded-lg border-white py-1 px-2">
-              سازمان‌های غیرخصوصی
+              سازمان‌های خصوصی
             </p>
-            <div className="overflow-auto h-[10rem] grid grid-cols-4 gap-4 border-1 rounded-lg border-white py-1 px-2">
-              {organizationData.private.map(({ url }) => (
+            <div className="overflow-auto h-[269px] grid grid-cols-4 gap-4 border-1 rounded-lg border-white py-1 px-2">
+              {data?.organizationsImage?.map((item) => (
                 <Image
-                  alt={`${url} image`}
-                  key={`private organization ${url}`}
-                  src={`/assets/landingImage/privateOrganization/${url}.png`}
+                  alt={item?.name}
+                  key={item?.id}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${item?.formats?.thumbnail?.url}`}
                   width={50}
                   height={50}
                   className="justify-self-center object-cover object-center"

@@ -2,23 +2,18 @@ import { ISuccessProps } from "../interface";
 import SuccessCardContainer from "./successCardContainer";
 
 const Success = ({ data }: ISuccessProps) => {
-  const successData = {
-    title: "دستاوردهای نارین افزار سهند",
-    description: `این دستآوردها گواهی بر تالشها و ابتکارات شرکت نارین افزار سهند در جهت تحول
-    صنایع و ارائه راهحلهای نوین در حوزه حسابداری و مدیریت مالی هستند که عالوه بر تامین
-    سـود شرکتهـا و صنایع، درجهـت رضایت و نفع مـشتریـان عمـل میکند.`,
-  };
+
   return (
     <div className="flex flex-col gap-16">
       <div className="px-4 mx-auto container flex flex-col gap-4">
         <h6 className="landingTitleFontSize font-bold text-primary">
-          {successData.title}
+          {data?.title}
         </h6>
         <p className="subTitleFontSize text-gray-600 text-justify">
-          {successData.description}
+          {data.description}
         </p>
       </div>
-      <SuccessCardContainer />
+      <SuccessCardContainer cover={data?.cover} successCards={data?.successCards}/>
     </div>
   );
 };

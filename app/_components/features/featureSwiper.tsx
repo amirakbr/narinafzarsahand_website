@@ -7,50 +7,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { useState } from "react";
-const FeaturesSwiper = () => {
+import { IFeaturesSwiperProps } from "../interface";
+const FeaturesSwiper = ({ data }: IFeaturesSwiperProps) => {
   const [currentIndex, setCurrentIndex] = useState<number>();
-  const yourNeeds = {
-    title: "همگام با نیاز شما",
-    description: `شرکت نارین افزار سهند با درک عمیق از نیازهای متنوع هر صنعت و الزامات شهری، اقدام
-        به طراحی و اجرای پروژههایی اختصاصی نمودهاست. هر شهر، هر کسبوکار و هر سازمان،
-        ویـژگیهـا و نیـازهـای منحصـر بـه فـرد خـود را دارنـد! بـه همیـن دلیـل، پـلتفـرمهـای مـالی مـا
-        متنــاسـب بـا شـرایـط و خـواستـههـای خــاص
-        ًال
-        نـه تنهـا جـامـع و پیشـرفتـه هستند، بلکـه کام
-        هـر منطقـه بـومـیسـازی میشـونـد.`,
-    solutions: [
-      {
-        label: "ایستگاه پایش",
-        image: "/assets/landingImage/controlGate.png",
-        id: 1,
-      },
-      {
-        label: " ساختار مشارکتی",
-        image: "/assets/landingImage/partnership.png",
-        id: 2,
-      },
-      {
-        label: "پلتفرم جامع مالی",
-        image: "/assets/landingImage/fintechPlatform.png",
-        id: 12,
-      },
-      {
-        label: "درگاه پرداخت",
-        image: "/assets/landingImage/paymentGateway-1.png",
-        id: 14,
-      },
-    ],
-  };
   return (
     <div className="flex flex-col gap-4 px-4">
       <h6 className="landingTitleFontSize font-bold text-primary">
-        {yourNeeds.title}
+        {data?.title}
       </h6>
       <p className="subTitleFontSize text-gray-600 text-justify">
-        {yourNeeds.description}
+        {data?.description}
       </p>
       <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 gap-4">
-        {yourNeeds.solutions?.map(({ image, label }, index) => (
+        {data?.solutions?.map(({ image, label }, index) => (
           <div
             className={`flex flex-col items-center gap-4 grayscale-0 md:grayscale-100 md:hover:!grayscale-0 transition-all group`}
             key={`feature ${index}`}
@@ -58,7 +27,7 @@ const FeaturesSwiper = () => {
             <div className="relative transition-all h-60 group-hover:scale-110  rounded-xl overflow-hidden w-64">
               <Image
                 alt="your need"
-                src={image}
+                src={`${process.env.NEXT_PUBLIC_API_URL}${image?.[0]?.formats?.large?.url}`}
                 fill
                 className="object-cover object-center"
               />
@@ -103,7 +72,7 @@ const FeaturesSwiper = () => {
           }}
           wrapperClass="h-full pt-8"
         >
-          {yourNeeds.solutions?.map(({ image, label, id }, index) => (
+          {data?.solutions?.map(({ image, label, id }, index) => (
             <SwiperSlide key={id}>
               <div
                 className={`p-4 flex flex-col items-center justify-center gap-2 transition-all  ${
@@ -113,12 +82,12 @@ const FeaturesSwiper = () => {
                 }`}
               >
                 <div className="relative transition-all h-60 group:hover:scale-105  rounded-xl overflow-hidden w-64">
-                  <Image
+                  {/* <Image
                     alt="your need"
-                    src={image}
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${item?.formats?.thumbnail?.url}`}
                     fill
                     className="object-cover object-center"
-                  />
+                  /> */}
                 </div>
                 <h6 className="text-center text-primary text-sm font-semibold border-b-2 border-b-primary pb-1">
                   {label}

@@ -1,4 +1,9 @@
-import { IAboutUsPage, IAgenciesPage, ILandingPage } from "./interface";
+import {
+  IAboutUsPage,
+  IAgenciesPage,
+  IEventsPage,
+  ILandingPage,
+} from "./interface";
 
 export const getLandingPage = async (): Promise<ILandingPage> => {
   return fetch(
@@ -27,6 +32,18 @@ export const getAboutUsPage = async (): Promise<IAboutUsPage> => {
 export const getAgenciesPage = async (): Promise<IAgenciesPage> => {
   return fetch(
     `https://betacms.narinsoft.ir/api/agencies-page?populate[banner][populate]=*&populate[Agencie_nonPrivate][populate]=*&populate[Agencie_javanSair][populate]=*&populate[keyFeatures][populate]=*&populate[Agencies_private][populate][terminals][populate]=*&populate[Agencies_private][populate][solutions][populate]=*`,
+    {
+      cache: "no-store",
+    }
+  )
+    .then((response) => response?.json())
+    .then((data) => data?.data)
+    .catch((error) => error);
+};
+
+export const getEventPage = async (): Promise<IEventsPage> => {
+  return fetch(
+    `https://betacms.narinsoft.ir/api/event-page?populate[banner][populate]=*&populate[PilgrimTransport_video][populate]=*&populate[ArbaeenTransitBenefits][populate]=*&populate[PilgrimTransport][populate]=*`,
     {
       cache: "no-store",
     }

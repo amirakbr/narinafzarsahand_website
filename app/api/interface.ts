@@ -208,3 +208,22 @@ export interface IAgenciesPage extends IStrapiConf {
     features: IFeature[];
   };
 }
+
+export interface IEventsPage extends IStrapiConf {
+  title: string;
+  description: string;
+  ArbaeenTransitBenefits: IFeature[];
+  ArbaeenTransitBenefits_title: string;
+  PilgrimTransport_video: {
+    id: number;
+    video: null;
+    videoCover: StrapiImage;
+  };
+  banner: IBanner;
+  PilgrimTransport: {
+    id: number;
+    title: string;
+    description: string;
+  };
+  footerDesc: string;
+}

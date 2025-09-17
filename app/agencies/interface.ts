@@ -1,41 +1,36 @@
+import { IFeature, StrapiImage } from "../api/interface";
+
 export interface IPrivateAgenciesProps {
-  privateAgenciesData: {
-    title: string;
-    description: string;
-  };
+  title: string;
+  description: string;
 }
 
 export interface ISolutionsProps {
-  ourSolution: {
-    title: string;
-    solutions: string[];
-    subtitle: string;
-  };
+  title: string;
+  solutions: IFeature[];
+  subtitle: string;
 }
 
 export interface ITerminalProps {
   terminalData: {
-    imageUrl: string;
     label: string;
+    image: StrapiImage[];
+    id: number;
   }[];
 }
 
 export interface IJavanseirProsp {
   javanseirData: {
+    coverBg: StrapiImage;
     title: string;
-    description: string;
     featuresTitle: string;
-    features: string[];
+    description: string;
+    features: IFeature[];
   };
 }
 
 export interface IKeyFeaturesProps {
-  keyFeatures: {
-    title: string;
-    features: {
-      label: string;
-      description: string;
-    }[];
-    description: string;
-  };
+  subTitle: string;
+  keyFeatures: IFeature[];
+  title: string;
 }

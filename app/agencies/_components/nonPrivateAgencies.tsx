@@ -1,14 +1,10 @@
 import { IPrivateAgenciesProps } from "../interface";
 
-const NonPrivateAgencies = ({ privateAgenciesData }: IPrivateAgenciesProps) => {
+const NonPrivateAgencies = ({ title, description }: IPrivateAgenciesProps) => {
   return (
     <div className="flex flex-col gap-8">
-      <h2 className="title-font-size text-primary font-bold">
-        {privateAgenciesData.title}
-      </h2>
-      <p className="p-font-size text-justify">
-        {privateAgenciesData.description}
-      </p>
+      <h2 className="title-font-size text-primary font-bold">{title}</h2>
+      <p className="p-font-size text-justify">{description}</p>
     </div>
   );
 };

@@ -1,13 +1,15 @@
 import Banner from "../../_components/banner/banner";
 import { IJavanseirProsp } from "../interface";
-import { CheckCircle, PlayCircle } from "lucide-react";
 
 const Javanseir = ({ javanseirData }: IJavanseirProsp) => {
-  const { description, features, featuresTitle, title } = javanseirData || {};
+  const { description, features, featuresTitle, title, coverBg } =
+    javanseirData || {};
   return (
     <Banner
       backGroundimageAlt="image of an empty road"
-      backGroundimageSrc="/assets/organization/insurance.png"
+      backGroundimageSrc={`${process.env.NEXT_PUBLIC_API_URL}${
+        coverBg?.formats?.large?.url || coverBg?.url
+      }`}
       classNames={{
         container: "self-stretch p-4",
         image: "object-center",
@@ -20,12 +22,12 @@ const Javanseir = ({ javanseirData }: IJavanseirProsp) => {
           <div className="flex flex-col gap-4">
             <p className="title-font-size">{featuresTitle}</p>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 gap-x-6 list-disc list-inside">
-              {features?.map((feature, index) => (
+              {features?.map((item) => (
                 <li
                   className="text-base lg:text-lg xl:text-xl"
-                  key={`javanseir feature ${index}`}
+                  key={`javanseir feature ${item?.id}`}
                 >
-                  {feature}
+                  {item?.text}
                 </li>
               ))}
             </ul>

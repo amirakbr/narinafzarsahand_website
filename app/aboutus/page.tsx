@@ -6,14 +6,6 @@ import { getAboutUsPage } from "../api/services";
 
 const About = async () => {
   const data = await getAboutUsPage();
-  console.log("dataaaaaaaa", data);
-
-  const features = [
-    "نوآوری: طراحی و اجرای راهکارهای مالی پیشرفته و اختصاصی",
-    "نوآوری: طراحی و اجرای راهکارهای مالی پیشرفته و اختصاصی",
-    "نوآوری: طراحی و اجرای راهکارهای مالی پیشرفته و اختصاصی",
-    "نوآوری: طراحی و اجرای راهکارهای مالی پیشرفته و اختصاصی",
-  ];
 
   return (
     <div>
@@ -76,15 +68,6 @@ const About = async () => {
               </p>
             </div>
           ))}
-
-          {/* <p className=" mt-3 p-font-size text-justify">
-            <span className="font-bold p-font-size mx-1">
-              چشم‌انداز نارین افزار سهند:
-            </span>
-            تبدیل‌شدن به پیشروترین شرکت ارائه‌دهنده خدمات مالی هوشمند در صنعت
-            حمل‌ونقل ایران و گسترش دامنه خدمات به سایر صنایع مرتبط با مدیریت
-            مالی.
-          </p> */}
         </div>
         <div className="my-12">
           <h4 className="text-right font-bold title-font-size text-primary my-3">

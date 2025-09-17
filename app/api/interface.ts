@@ -178,3 +178,33 @@ export interface IAboutUsPage extends IStrapiConf {
     value: string;
   }[];
 }
+
+export interface IAgenciesPage extends IStrapiConf {
+  banner: IBanner;
+  keyFeatureTitle: string;
+  keyFeatures: IFeature[];
+  keyFeatureSubtitle: string;
+  Agencies_private: {
+    title: string;
+    description: string;
+    solutionsTitle: string;
+    solutions: IFeature[];
+    subtitleSolution: string;
+    terminals: {
+      label: string;
+      image: StrapiImage[];
+      id: number;
+    }[];
+  };
+  Agencie_nonPrivate: {
+    description: string;
+    title: string;
+  };
+  Agencie_javanSair: {
+    coverBg: StrapiImage;
+    title: string;
+    featuresTitle: string;
+    description: string;
+    features: IFeature[];
+  };
+}

@@ -16,8 +16,8 @@ const Features = ({ data, solutionData }: IFeaturesProps) => {
           <div className="grid grid-cols-1 xl:grid-cols-[1fr_1.3fr] gap-4">
             <div className="h-full">
               {data?.features
-                .filter(({ isLargeOne }) => isLargeOne)
-                .map(({ description, image, title }) => (
+                ?.filter(({ isLargeOne }) => isLargeOne)
+                ?.map(({ description, image, title }) => (
                   <div
                     className="flex flex-row xl:flex-col items-center gap-4 shadow-md shadow-slate-900 rounded-lg px-2 py-1 xl:p-0 h-full"
                     key={`${title}`}
